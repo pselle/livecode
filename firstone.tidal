@@ -1,0 +1,28 @@
+cps 1.2
+
+d1 $ sound "bd*2 0 bd 0"
+d1 $ sound "bd:5*2 sd:3 bd drum"
+
+d2 $ slow 3 $ sound "hh/2 hh*2 hh/2" # speed "1.5"
+d3 silence
+d3 $ sound "arpy 0 arpy 0" # crush "5" # speed "4" # pan (rand)
+
+d4 $ slow 2 $ sound "sd*3 sd sd sd" # crush "4" # speed "0.3"
+d5 $ sound "world world world" # pan "0.1 0.4 0.6" # gain "0.7 0.7 0.7"
+d5 silence
+d6 $ rev (sound "[bd/2]*3 bd bd")
+d6 $ sound "[clubkick*4]*2" # speed 1
+d8 $ sound "[clubkick/2]*3 0 clubkick 0" # gain "0.5" # crush "4"
+d8 silence
+d6 silence
+d9 $ slow 3 $ sound "stab*2" # crush "4"
+d1 $ sound "wobble world" # crush "4"
+d3 $ sound "arpy*4" # pan (rand) # crush "6" # speed (rand)
+t1 anticipate $ sound (samples "bd(3,8)" (run 3))
+d8 $ slow 1 $ sound "wind*3"
+d9 $ slow 2 $ sound "toys/2 0 tok*2 toys" # speed "0.3" # crush "3"
+d8 silence
+
+
+
+hush

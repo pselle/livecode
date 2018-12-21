@@ -1,0 +1,11 @@
+cps 0.8
+d1 $ sound "arp?" # speed "3"
+d2 $ sound "birds?" # speed "2" # crush "4"
+d2 $ sometimesBy 0.75 (# crush 4) $ sound "bd arpy sn ~"
+d3 $ sometimes (# speed "4") $ sound "arp ~ arp*2 ~"
+d4 $ degradeBy 0.25 $ sound "bin"
+d4 $ sound "bin?"
+d1 silence
+d2 silence
+d3 silence
+hush
