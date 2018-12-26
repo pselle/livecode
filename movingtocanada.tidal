@@ -1,0 +1,10 @@
+-- Title: Moving to Canada because I overheard my parents talking about how to pay for Medicare
+cps 0.75
+
+d1 $ sound "[bd*2 sd] bd sd?" # gain "1 1 1 0.5"
+d1 $ sound "hh hh hh hh"
+d2 $ degradeBy 0.9 $ sound "xmas ~ ~ ~" # gain "0.8"
+d3 $ sound "ht ~ lt ~" # crush "4" # gain "0.6"
+d4 $ sound "arpy/2 arpy*2 [arpy]" # speed (scale 1 5 $ rand)
+-- gain "0.3" # crush "5"
+hush
