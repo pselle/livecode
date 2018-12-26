@@ -1,3 +1,4 @@
+-- From the livecode.nyc workshop on 12/15 in Philadelphia
 cps 1.2
 
 d1 $ sound "bd*2 0 bd 0"
