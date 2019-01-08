@@ -1,0 +1,8 @@
+-- Title: In the new Recurse Center space, making friends
+
+cps 0.7
+
+d1 $ sound "bd ~ hh*2 ~" # crush "9"
+d2 $ sound "arpy*4 arpy*2" # speed "3" # gain "0.5"
+d3 $ sound "lt/4" # crush "3"
+hush
