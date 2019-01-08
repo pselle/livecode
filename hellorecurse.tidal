@@ -4,5 +4,9 @@ cps 0.7
 
 d1 $ sound "bd ~ hh*2 ~" # crush "9"
 d2 $ sound "arpy*4 arpy*2" # speed "3" # gain "0.5"
-d3 $ sound "lt/4" # crush "3"
+d3 $ sound "lt/3" # crush "3" # gain "0.3"
+d4 $ sound "arp" # crush "5" # gain "0.4"
+d2 silence
+d3 silence
+
 hush
