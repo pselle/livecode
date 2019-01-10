@@ -1,0 +1,17 @@
+-- Title: Music of one's own
+-- Only 808s (ok and 909)
+-- 808 808bd 808cy 808hc 808ht 808lc 808lt 808mc 808mt 808oh 808sd
+
+d1 $ sound "[808bd ~ 808bd] ~ 808bd 808lt/2"
+d2 $ every 3 (fast 3) $ sound "808cy/3 [808mc/2 808oh]"
+d3 $ sound "~ [808sd*2] ~ ~"
+d4 $ sound "808lc ~ [808lc*8] ~" # crush "3" # gain "0.6"
+d5 $ sound "~ ~ [909*3]/2 ~"
+d6 $ sound "808oh*9" # speed (irand 5)
+d5 silence
+d4 silence
+d6 silence
+d2 silence
+d1 silence
+d3 silence
+hush
