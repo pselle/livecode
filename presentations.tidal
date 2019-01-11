@@ -1,0 +1,11 @@
+-- Title: Presentations
+
+cps 0.7
+
+d1 $ sound "[808bd ~ 808bd] ~ 808bd 808lt/2"
+d1 $ sound "bd*2 lt*3/2"
+d2 $ sound "baa baa baa*3 ~" # crush "3" # speed "8" # gain "0.6"
+d3 $ sound "arp"
+d2 silence
+d4 $ sound "arpy"
+hush
