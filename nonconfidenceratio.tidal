@@ -1,0 +1,11 @@
+-- Title: Non-confidence ratio
+
+cps 1.4
+
+d1 $ sound "bd ~ <bd hh arpy:3*3> ~"
+d1 $ degrade $ chop 40 $ sound "[cc*2, clubkick] [bd]/2" # crush "3"
+
+d2 $ sound "[bassfoo*3] ~ clubkick" # crush "4" # speed (irand 5)
+d2 silence
+
+hush
