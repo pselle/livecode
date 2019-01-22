@@ -2,10 +2,10 @@
 
 cps 1.4
 
-d1 $ sound "bd ~ <bd hh arpy:3*3> ~"
-d1 $ degrade $ chop 40 $ sound "[cc*2, clubkick] [bd]/2" # crush "3"
-
-d2 $ sound "[bassfoo*3] ~ clubkick" # crush "4" # speed (irand 5)
+d1 $ sound "bd*3 ~ <bd hh> ~"
+d2 $ sound "arpy*3 clubkick/2" # gain "0.8" # speed (irand 5)
+d3 $ sound "[cc]/4" # crush "3" # gain "0.6"
+d3 silence
 d2 silence
-
+d1 silence
 hush
