@@ -1,13 +1,13 @@
--- Field Notes
+-- Title: Field Notes
 -- This one might get weird
 
 cps 0.4
 
 d1 $ degradeBy 0.25 $ sound "02field:1"
 d1 silence
-d2 $ fast 10 $ every 3 (0.25 <~) $ up "8 10 9" # sound "arp*3" # gain "0.9"
+d2 $ fast 10 $ every 3 (0.25 <~) $ up "8 10 6" # sound "arp*3" # gain "0.9"
 d2 silence
-d3 $ rev $ up (run 8) # sound "arpy(2,5)" # crush "4"
+d3 $ rev $ up (run 8) # sound "arpy(6,9)" # crush "4"
 d3 $ rev $ up (run 8) # sound "arpy(2,5)" # crush "4" # speed "-8"
 d3 silence
 d4 $ sound "lt lt [lt hh]" # gain "0.8" # speed "-2"
