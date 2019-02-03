@@ -1,0 +1,31 @@
+-- Title: Bleep Bloop 3
+
+cps 0.85
+
+d1 $ sound "[bd*2 ~ ht ~, bd hh]"
+d2 $ rev $ sound "arpy*3 arpy lt" # pan (rand) # speed "-2 4" # crush "3" # gain "0.7"
+d3 $ sound "arp arp" # gain "0.6"
+d4 $ chop 20 $ sound "01elevators" # gain "0.8"
+d4 silence
+d2 $ sound "808 lt 808:3" # crush "8" # speed "3 4 9"
+d1 silence
+d1 $ sound "[voodoo, 808:2 808:4]" # crush "3"
+d2 $ chop 40 $ sound "02field:3" # gain "0.8" -- can't remember what this one is
+d1 silence
+d1 $ sound "hh*3 hh:2 hh*5 hh:5"
+d3 $ sound "bd:2/2 bd:3/3" # gain "0.9"
+d4 $ sound "arpy*20" # gain "0.8" # speed "-1" # crush "3"
+d4 silence
+d2 silence
+d3 $ sound "baa"
+d3 silence
+d3 $ chop 20 $ sound "voodoo:1 lt*3 ht:3" # speed "11" # crush "4" # gain "0.8"
+d2 silence
+d1 silence
+d1 $ sound "[hh:2 hh*4 ~, bd/3 ~ hh:4]" # crush "4"
+d2 $ sound "808oh/3 808:3 808mc:3/3"
+d4 $ sound "808:3*19"
+d4 silence
+d4 $ slow 4 $ sound "wind wind:1 wind:3" # crush "4" # speed "1 5 3"
+d1 silence
+hush 
