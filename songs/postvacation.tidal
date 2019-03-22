@@ -1,0 +1,10 @@
+-- Title: Post-vacation
+cps 1
+
+d1 $ sound "[bd bd*3] [hh lt/2]"
+d2 $ sound "[bd*4, 808cy/5]" # speed "-1"
+d3 $ sound "ht ht ~ ht*3"
+d3 silence
+d2 silence
+d1 silence
+hush
