@@ -1,0 +1,17 @@
+-- Title: First Day
+cps 1.0
+
+d1 $ sound "arpy(3,8)" # n "0 2"
+d1 $ sound "arpy(3,8)" # n (every 4 (* 2) "0 2")
+d2 $ sound "arpy(3,8)" # n "2 5"
+d2 $ sound "arpy(3,8)" # n ("[2 .. 10]" * 2)
+d2 $ sound "arpy(3,8)" # n (every 2 (* 2) "[2 .. 10]" * 2)
+d3 $ sound "hh(5,8)"
+d3 $ sound "hh(5,8,3)"
+d4 $ sound "~ ~ birds/4"
+d5 $ sound "808cy(3,8)" # n "3 5 6"
+d2 $ sound "arpy(5,8)" # n "[5 .. 10]" -- 2 to 5
+d1 silence
+d2 silence
+d5 silence
+hush
