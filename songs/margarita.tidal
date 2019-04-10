@@ -1,0 +1,18 @@
+-- Title: Margarita
+
+d1 $ sound "bd ~ [bd,cp*1] ~"
+d2 $ sound "lt:1 ~ lt:1*2 ~"
+d3 $ sound "made ~ [dist, drum*3]"
+d3 silence
+d2 silence
+d3 $ sound "crow/3"
+-- dork
+d4 $ sound "casio(5,8)" # up (run (choose [2..10])) # vowel "e"
+d5 $ sound "[bass3*4, hh ~ hh*2 ~]"
+d6 $ sound "co ~ diphone/2 ~"
+d2 silence
+d3 silence
+d5 silence
+d4 silence
+d1 silence
+d6 silence
