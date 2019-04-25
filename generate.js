@@ -7,6 +7,7 @@ function songFragment(filename) {
       <figcaption><a href="https://github.com/pselle/livecode/blob/master/songs/${filename}">${song}</a></figcaption>
       <audio
           controls
+          preload="metadata"
           src="http://beats.thewebivore.com/${song}.mp3">
               Your browser does not support the
               <code>audio</code> element.
@@ -28,6 +29,8 @@ const base = `<!DOCTYPE html>
       Below you'll find my songs.
       They're in alphabetical order right now, aka the worst kind of order.
       Each song links to its .tidal file on GitHub, which was saved at the end of the song.
+      The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>, and I'm
+      <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat.
     </p>
   `;
 
@@ -42,4 +45,4 @@ const end = `</body></html>`;
 console.log('writing file');
 fs.writeFileSync('./dist/index.html', base+songs+end, { encoding: 'utf-8' });
 console.log('uploading to S3');
-execSync('cd dist && aws s3 cp index.html s3://beats.thewebivore.com');
+// execSync('cd dist && aws s3 cp index.html s3://beats.thewebivore.com');
