@@ -22,6 +22,8 @@ const base = `<!DOCTYPE html>
     <meta charset="utf-8">
     <title>Pam Live Codes</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pam's live coding music, made with Tidal Cycles.">
   </head>
   <body>
     <h1>Pam's Live Code Songs</h1>

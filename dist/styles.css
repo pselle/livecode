@@ -3,4 +3,26 @@ html {
   background: -webkit-linear-gradient(to left, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: Courier New;
+  font-size: 1em;
+}
+
+figure {
+  margin: 10px 5% 10px 0;
+  background: #636FA4;
+  padding: 1em;
+  box-sizing: content-box;
+  width: max-content;
+  float: left;
+}
+
+figcaption {
+  margin-bottom: 4%;
+}
+
+a {
+  color:#E8CBC0;
+}
+
+a:visited {
+  color: #1a1a1a;
 }
