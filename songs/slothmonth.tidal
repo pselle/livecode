@@ -1,0 +1,24 @@
+-- Title: Sloth month
+
+cps 1.3
+
+d1 $ s "bd ~ [sd:1] ~" # n (irand 10)
+d2 $ every 2 (|* speed "2") $ s "~ ~ [cp*2] ~"
+d3 $ every 3 (|+ gain "0.2") $ s "[bass1*4,bass/3]" # gain "1"
+d4 $ s "blip*4 sn sn sn*2"
+d5 $ degradeBy "0.9" $ s "bev"
+d4 $ every 2 (|* speed "2") $ s "blip*4 sn sn sn*2"
+d4 silence
+d6 $ whenmod 6 3 (rev) $ every 3 (|+ gain ".1") $ gain "1 1 1.2 1"# s "arp"
+d5 silence
+d1 silence
+d2 $ whenmod 6 4 (|+ speed "3") $ "cp bd*2 cp hh*3"
+d3 $ every 3 (|+ crush "2") $ s "bass2*4" # crush "3"
+d6 silence
+d4 $ s "rave"
+d4 silence
+d2 $ "cp(5,8)"
+d1 silence
+d2 silence
+d3 silence
+hush
