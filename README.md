@@ -7,6 +7,9 @@ The files are the source, saved at the end of a recording/jam, of music made wit
 ## Organization
 
 - curiosities: things in progress, other people's files, experimentation, scripts
+- dist: website stuff
+- sets: files from performances (when done live)
+- songs: the song source files!
 
 ##  Updating the site
 
