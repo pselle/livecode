@@ -11,3 +11,8 @@ The files are the source, saved at the end of a recording/jam, of music made wit
 ##  Updating the site
 
 Run `node generate.js` which will generate the site from the `songs` directory, and push the update to S3.
+
+## Helpful notes
+`ffmpeg -i foo.aiff -f mp3 -acodec libmp3lame -ab 320000 -ar 44100 foo.mp3`
+
+`aws s3 cp ./foo.mp3 s3://beats.thewebivore.com
