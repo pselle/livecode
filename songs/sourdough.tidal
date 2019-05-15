@@ -1,16 +1,13 @@
 -- Title: Sourdough
 cps 2
 
-d1 $ s "808(5,8)" # n (every 2 (*2) $ choose [1..5])
-
-d2 $ every 2 (|* speed "2") $ every 3 (|+ crush "2") $ s "~ ~ [cp*2] ~" # crush "2" # vowel "a"
-d3 $ every 3 (|+ gain "0.2") $ s "[bass1*4,bass/3]" # gain "1"
-d4 $ s "blip*4 sn sn sn*2"
-d5 $ degradeBy "0.9" $ s "bev"
-d4 $ every 2 (|* speed "2") $ s "blip*4 sn sn sn*2"
-d1 $ silence
-d6 $ whenmod 6 3 (rev) $ every 3 (|+ gain ".1") $ gain "1 1 1.2 1"# s "arp"
-
-d1 ( s "lt" ( vowel "a" ) )
-
+d1 $ s "808(5,8)" # n (every 2 (*2) $ choose [1..6])
+d2 $ degradeBy 0.7 $ every 3 (slow 0.5) $ s "arpy(11,8)" # n (choose [1..7]) # vowel "a" # gain "0.8"
+d3 $ s "808bd*4"
+d4 $ s "~ ~ blip ~"
+d5 $ degradeBy "0.2" $ s "cc" # gain "0.7"
+d2 $ s "arpy(5,8)" # n (choose [10..15]) # vowel "a" # pan (choose [0.2..0.9]) # crush "5"
+d2 silence
+d1 silence
+d3 silence
 hush
