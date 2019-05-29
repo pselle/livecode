@@ -1,0 +1,14 @@
+-- Title: Texas
+
+setcps 1.1 -- new tidal func!
+
+p "bassline" $ s "[bd, lt:1/2] ~ [bd, lt:1, cp/3] ~" # pan tri
+p "bassline" $ "bd ~ bd"
+d1 $ s "sd:1(3,8)" -- # pan sine
+d2 $ every 2 (|+ n "2") $ s "arpy*4" # n (choose [2..6]) # coarse "<4 8 16 24>"
+d3 $ every 2 (|- speed "1") $ s "mt(5,7)" # speed "1 3 6" # gain "1.2"
+d3 $ every 2 (|- speed "1") $ s "mt" # speed "2 3 5" # gain "1.2" # crush "6" # pan sine
+d1 silence
+d2 silence
+p "bassline" silence -- this didn't work
+hush
