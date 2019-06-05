@@ -1,0 +1,11 @@
+setcps (130/60/4)
+
+d1 $ s "[bd,hh:2] bd [bd,hh,cp] bd"
+d2 $ s "bass*4" # (every 2 (|+ n 1) $ n "0 2 0 2")
+d3 $ s "~ clubkick:3 cc:3 clubkick:3"
+d4 $ s "gabba:1*8" # crush "5" # pan (rand)
+d5 $ s "808:3*32"
+d5 $ s "moog ~ sn ~" # cut "2"
+d3 silence
+d5 silence
+hush
