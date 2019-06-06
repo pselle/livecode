@@ -1,0 +1,14 @@
+-- Title: [dark] House
+setcps (120/60/4)
+
+d1 $ "~ stab stab ~" # crush "3"-- # (every 2 (|+ crush "1") $ crush "0 0 3 0")
+d2 $ "808bd:1*4" # gain "1.4"
+d3 $ "popkick ~ popkick*2 ~"
+d4 $ "bass3(3,8)"
+d1 $ "toys" # crush "3" -- # n "1"
+d5 $ "808:3(32,8)"
+d5 $ n (run 8) # "arpy"
+d5 silence
+d4 silence
+d1 silence
+hush
