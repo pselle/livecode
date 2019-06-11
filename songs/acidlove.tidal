@@ -1,0 +1,41 @@
+-- Title: Acid Love
+
+setcps (128/60/4)
+
+d1 $ s "bd [bd*4] bd bd" # gain "1.1"
+d2 $ sound "sn*16" # speed (slow  $ range (-1) 3 sine) # crush "3"
+d3 $ n (arp "up" "a'min7'3") # s "arpy" # vowel "a" # crush "3"
+solo 3
+unsolo 3
+d3 silence
+d2 $ s "sd(5,8)" # speed (range 1 3 tri) # vowel "o"
+d3 silence
+d4 $ s "bass3(3,5)"
+d4 $ s "arpy(16,9)" # n (choose [2 .. 6])
+d1 $ stack [s "drum*4",
+    s "bass3*4",
+    s "arpy*8" # n (choose [2 .. 6])
+]
+d2 $ every 2 (|+ speed "1") $ "sn*16" # speed (tri+4)
+d5 $ s "juno" # vowel "i"
+d5 silence
+d1 $ fastcat [s "bd*4",
+              s "808bd:1*8"] # speed (tri+3)
+d2 $ s "arpy(9,16)" # n (choose [1..8])
+d3 $ s "sd(5,16)" # vowel "a" # speed (choose [1..3])
+solo 2
+unsolo 2
+d8 $ s "~ cp ~ cp" # n (every 2 (|+ "1") $ "1 2")
+d1 silence
+d5 $ sound "bd*8 sn*8" # cutoff (range 300 1000 $ cosine) # resonance "0.4"
+d2 $ sound "sn*24" # speed (fast 2 $ range (-1) 3 sine) # crush "3"
+d2 silence
+d2 $ s "arpy(9,16)" # n (choose [1..8]) # crush "2"
+d4 $ s "arpy(16,9)" # n (choose [2..8]) # crush "2" # vowel "a"
+solo 4
+unsolo 4
+d3 silence
+d5 silence
+d2 silence
+d4 silence
+hush
