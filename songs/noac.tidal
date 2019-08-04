@@ -1,0 +1,17 @@
+-- Title: No AC
+
+d1 $ every 2 (# lpf "1000") $ layer [id, (# crush "2")] $ s "bass3*4"-- # lpf "1000"
+d2 $ s "~ popkick ~ popkick"
+d3 $ jux (rev) $ layer [(# crush "4")] $ s "arpy(5,9)" # vowel "o" # gain "1.1" # n (choose [0 .. 4])
+solo 3
+unsolo 3
+d4 $ every 2 (rev) $ every 3 (|+ speed "1") $ s "mt*8" # gain "1.15" # crush "3" # speed (choose [-1..5])
+d3 $ s "arpy(5,9)" # vowel "o" # gain "1.1" # crush "3" # n (run 13)
+solo 4
+unsolo 4
+d5 $ s "bd*4" # gain "1.4" # crush "3" # speed "4"
+d1 silence
+xfade 4 $ s "~"
+xfade 3 $ s "~"
+xfade 2 $ s "~"
+hush
