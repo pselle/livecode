@@ -1,0 +1,39 @@
+-- Title:
+
+d1 $ s "bass1" # speed "2"
+d2 $ layer [fast 3, id] $ chop 3 $ s "01elevators" # speed "0.5"
+d3 $ s "bleep/3" # speed "0.4"
+d4 $ rarely (|+ speed "0.4") $ s "crow/2 crow/2 crow" # crush "2" # speed (range 0.4 0.8 tri)
+xfade 4 $ s "birds" # crush "3" # speed "0.4"
+xfade 4 $ s "~"
+d3 silence
+xfade 1 $ s "~"
+xfade 2 $ s "~"
+d1 $ s "drum*3" # lpf "100"-- 1000 2000"
+d1 $ layer [slow 2] $ n (arp "pinkyup" "'maj9 [0,4,7,11]") # sound "if" # lpf "1000"
+d2 $ s "bd:2*4" # lpf "3000" # speed "3"
+d3 $ sometimes (# crush "3") $ sometimes (# speed "1")  $ n "3 4 3 4" # s "bass1"
+solo 1
+unsolo 1
+d1 $ slow 2 $ n (arp "pinkyup" "'maj9 [3,5]") # sound "if" # lpf "1000"
+solo 3
+unsolo 3
+d4 $ sometimes (# crush "3") $ s "bleep(3,4,7)" -- # lpf "2000"
+d5 $ n "1 3 1 3" # s "sn" # speed (range 0.4 0.8 square)
+unsolo 4
+solo 3
+unsolo 3
+xfade 3 $ "~"
+d3 $ s "808:3*4" # speed "1.4"
+jumpIn 1 3 $ s "808:3*4"
+d1 silence
+d2 silence
+d5 silence
+d1 $ superimpose (slow 3) $ sometimes (# speed "2") "bass1*4"
+d1 $ s "bass1"
+d4 $ s "cp(3,4)"
+d2 $ s "bd*4"
+d4 silence
+d2 silence
+d1 silence
+hush

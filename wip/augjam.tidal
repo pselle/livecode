@@ -1,0 +1,50 @@
+-- Title: August Jam
+
+d1 $ s "808:3*4"
+d2 $ s "~ 808:4 ~ 808:4"
+d3 $ s "hh*4" # gain "1.7" # speed (choose [-1 ..5])
+solo 3
+unsolo 3
+d4 $ every 3 (# vowel "a") $ s "lt*8" # crush "3" # lpf "5000" # vowel "i" # speed (choose [1..5])
+d5 $ s "casio(5,8)" # gain "1.2"
+d5 $ s "casio(5,8)" # gain "1.3" # n (choose [1..4]) # speed "-1" # crush "3"
+xfade 1 $ s "808:4*4" # crush "3" # speed "3" # gain "1.5"
+solo 1
+unsolo 1
+xfade 5 $ layer[id,(|+ speed "2")] $ s "casio(5,8)" # gain "1.3" # crush "3" # speed (choose [-1..4])
+xfade 4 $ s "mt*8" #crush "3" # vowel "i" # gain "1.2"
+xfade 4 $ s "~"
+xfade 1 $ layer [id, rev] $ s "808:3*4" # speed "2 1 4 2"
+solo 1
+unsolo 1
+xfade 5 $ layer [(# speed "2"),(|+ speed "4")] $ s "numbers:4 numbers:2 numbers:1 numbers:4" # pan (rand)
+solo 5
+unsolo 5
+xfade 5 $ s "~"
+xfade 1 $ s "~"
+xfade 2 $ s "~"
+hush
+
+
+d1 $ every 3 (#lpf "100") $ s "bass3*4"
+d2 $ "~ popkick ~ popkick" # hpf "2000"
+d3 $ jux (rev) $ s "arpy(5,9)" # vowel "e" # crush "4" # n (run 11) # pan (rand)
+solo 3
+unsolo 3
+d4 $ every 2 (|+ speed "1") $ s "lt*8" # crush "3" # speed (choose [-1..5])
+solo 4
+unsolo 4
+d5 $ every 2 (|+ speed "2") $ s "bd*4" # gain "1.4" # crush "3" # speed "2" # lpf "100"
+d1 silence
+xfade 4 $ s "lt(3,7)"
+xfade 3 $ "~"
+d3 $ brak $ s "casio*4" # crush "3"
+d4 $ s "lt*4"
+d6 $ s "sn*4" # n "1 2 3 4" # crush "4"
+d7 $ chop 14 $ s "baa"
+d7 silence
+--- synth
+d7 $ striate 6 $ n "18 24 13 19 7" # "alphabet"
+d7 $ striate 15 $   n "1 2 3 4" # s "numbers"
+xfade 7 $ s "~"
+xfade 5 $ s "~"
