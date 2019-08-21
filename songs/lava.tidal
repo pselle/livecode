@@ -1,0 +1,26 @@
+-- Title: Lava
+-- 8/18/2019
+setcps 0.5
+
+d1 $ striate 10 $ chop 10 $ s "02field" # pan (tri) # gain "1.14"
+d2 $ stack [s "koy*3" # speed (choose [0..2]), s "jazz*2"]
+d3 $ every 2 (|+ speed 1) $ s "moog(3,5)" # speed (range 3 5 square) # gain "0.8" # vowel "a"
+xfade 3 $ s "~"
+d2 $ every 3 (# crush "2") $ every 2 (|- speed 1) $ s "koy*3" # speed 2
+d3 $ every 5 (# speed "1") $ s "oc*2" # speed "3"
+d1 $ fast 2 $ s "arpy*4" # n "2 4 2 5" # crush "3"
+d2 $ fast 4 $ every 2 (|+ speed (choose [0..2])) $ s "arpy*4" # n "4 6 4 7"
+xfade 1 $ fast 2 $ s "arpy*4" # n "1 -1 1 -1"
+d4 $ s "arp*4" # speed "1"
+d5 $ brak $ s "~ popkick ~ popkick"
+d5 $ every 3 (|+ speed "1") $ s "808:3*4" # speed "2"
+d3 $ "mt*4" # crush "3"
+solo 1
+unsolo 1
+xfade 1 $ s "~"
+xfade 4 $ s "~"
+xfade 5 $ s "~"
+d3 silence
+solo 2
+unsolo 2
+hush
