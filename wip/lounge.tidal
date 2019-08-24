@@ -1,0 +1,20 @@
+setcps 0.5
+d1 $ s "drum*4" # lpf "1000 100 2000" # pan (tri)
+d2 $ every 3 (# vowel "a") $ fast 2 $ s "lt*4"
+d3 $ s "~ 808:3 ~ 808:3"
+d5 $ n "2 0 1 9" # s "notes" # hpf "600"
+d6 $ s "seawolf" # gain "0.8"
+once $ s "toys"
+xfade 6 $ s "wind*4"
+d6 $ s "wind*4" # speed (range 1.2 1.9 tri)
+d7 $ s "tabla*4" # crush "4"
+xfade 1 $ s "~"
+xfade 2 $ s "~"
+solo 6
+unsolo 6
+d7 silence
+d3 silence
+solo 5
+unsolo 5
+d6 silence
+hush
