@@ -2,19 +2,19 @@
 -- 8/24/2019
 setcps (140/60/4)
 
-d1 $ s "bd*4"
 d1 $ s "bd bd [bd*3] bd"
-d2 $ s "~ [popkick, cp/2] ~ [popkick, cp/2]"
+d2 $ s "~ [popkick, cp/2] ~ [popkick, cp/2]" # crush "5"
 d3 $ s "arp"
-once $ s "toys"
+once $ s "toys" # speed "2"
 d4 $ every 2 (|+ speed "1") $ s "toys" # speed "3"
 d5 $ s "808*4"
-d6 $ every 2 (fast 3) $ s "moog*2" # hpf "1000" -- # crush "3"
-d7 $ striate 10 $ s "notes(5,9)" # n (range 3 8 cosine)
+d6 $ every 2 (fast 3) $ s "moog*2" # hpf "1000"-- # crush "3"
+d7 $ slow 2 $ striate 10 $ s "notes(5,9)" # n (range 3 8 cosine)
 d1 $ s "bd bd [bd*3] bd"
 d8 $ jux (rev) $ s "909*8" # speed (choose [-1..5])
+solo 8
+unsolo 8
+solo 1
+unsolo 1
 solo 4
-unsolo 4
-solo 3
-xfade 3 $ s "~"
 hush
