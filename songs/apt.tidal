@@ -1,0 +1,30 @@
+-- Title: Apt
+-- 8/26/2019
+d1 $ jux (fast 1.3) $ every 2 (|+ speed (rand*"0.2")) $ jux (# n "2 0 1 9") $ s "notes(6,9)" # n "3 1 3 1" # speed (range (rand+0.1) 1.6 sine)
+d1 $ fast 5 $ every 2 (|+ speed (rand*"0.2")) $ jux (rev) $ s "notes(6,9)" # n "3 1 3 1" # speed (range (rand*1) 1.6 sine) # crush "3"
+d2 $ rarely (# s "cp") $ s "bd*4"
+d3 $ s "[mt*2,wind*2]" # lpf "5000"
+d4 $ s "~ popkick [cp*2] popkick"
+xfade 1 $ "~"
+d1 silence
+xfade 1 $ sometimes (# s "bassfoo") $ s "bass3(5,8)"
+d5 $ brak $ jux (# n "2 0 1 9") $ s "notes*4" # n "3 1 3 1"
+d8 $ rarely (fast 2) $ s "hh*16" # gain "1.5" # speed (range 1 1.3 sine)
+once $ s "cosmicg:2" # gain "0.8"
+d6 $ s "hardkick*4" # speed (range 1 1.4 cosine)
+xfade 8 $ s "~"
+xfade 7 $ s "hh*4" # gain "2" # n "4" # speed "1"
+xfade 7 $ s "~"
+d7 $ brak $ s "jazz*8"
+xfade 3 $ s "[mt*2, lt*2]"
+d6 $ every 1 (|+ speed (rand)) $ s "cp*4" # speed (range 1 1.4 cosine)
+xfade 3 $ s "~"
+solo 5
+unsolo 5
+xfade 5 $ s "~"
+d7 $ jux (rev) $ brak $ s "jazz(6,8)" # vowel "e"
+xfade 6 $ s "~"
+solo 7
+unsolo 7
+d4 silence
+hush
