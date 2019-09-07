@@ -4,11 +4,16 @@
 setcps 0.8
 
 d1 $ s "stab*2"
-once $  s "02field:1" # speed "0.5 "-- # crush "3"
+once $  s "02field:1" # speed "0.6"-- # crush "3"
 -- d3 $ layer [id, fast 2] $ sometimes (# lpf "800") $ striate 3 $ every 3 (fast 2)
-xfade 3 $ layer [id, fast 2] $ sometimes (#lpf "900") $ striate 3 $ every 3 (fast 2) $ s "lt*4" # crush "4" # lpf "500"
--- d4 $ often (# speed "0.4") 
-d4 $ n "0 2 4 5" # s "casio"
+d3 $ layer [id, fast 2] $ sometimes (#lpf "900") $ striate 3 $ every 3 (fast 2) $ s "lt*4" # crush "4" # lpf "500"
+-- d4 $ often (# speed "0.4")
+d4 $ often (# speed "0.3") $ n "0 2 4 5" # s "casio" # speed "0.6"
 d5 $ s "bass3*4" # crush "3"
-d6 $ brak $ s "mt clubkick mt clubkick" # speed "0.5"
+-- d6 $ brak
+d6 $ brak $ every 2 (# speed "0.5") $ s "mt clubkick mt clubkick" -- # speed "0.5"
+hush
+xfade 3 $ s "~"
+xfade 1 $ s "~"
+xfade 5 $ s "~"
 hush
