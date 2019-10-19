@@ -1,0 +1,15 @@
+-- Title: haunting
+-- Recorded: 10/19/2019
+
+d1 $ every 3 (# vowel "e") $ gap 15 $ s "wind*4" # gain "1.2"
+xfade 2 $ s "arp(5,11)" # lpf "500"
+d2 $ s "arp(5,11)" # lpf "500"
+d3 $ layer [id, (# vowel "a")] $ loopAt 6 $ chop 5 $ s "01elevators"
+xfade 3 $ layer [id, (# speed "0.5")] $ loopAt 3 $ chop 4 $ s "01elevators"
+xfade 1 $ striate 4 $ s "[wind*4, toys/3]" # vowel "e" # crush "4"
+once $ s "stab"
+xfade 4 $ every 3 (0.25 ~>) $ s "stab sn lt sn" # gain "1.1" # pan "0.2 0.5 .1 0.5"
+xfadeIn 4 3 $ s "~"
+d1 $ s "toys/3" # crush "4"
+xfadeIn 3 5 $ s "~"
+xfadeIn 2 1 $ s "~"

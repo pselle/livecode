@@ -1,4 +1,5 @@
 -- Title: Lounge
+-- Recorded: 9/26/2019
 
 setcps 0.5
 xfade 1 $ s "drum*4" # lpf "1000 100 2000 1000" # pan (tri) # gain "1.3"
