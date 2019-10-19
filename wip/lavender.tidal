@@ -1,0 +1,12 @@
+cps 1.2
+d1 $ s "bd*4" # n "6" # gain "1.25" # lpf "500" # pan (cosine)
+d2 $ every 5 (fast 8) $ s "808:3*2"
+d3 $ s "arpy(5,11)" # n (range 1 5 tri) # hpf "700" # speed "0.8" # vowel "i" # crush "8"
+d4 $ stut 5 0.5 0.1 $ s "sn"
+d3 $ every 3 (fast 3) $ s "notes*16" # n (range 1 5 tri) # hpf "700" # speed "0.2" # vowel "i" # crush "8"
+xfadeIn 2 4 $ s "808:2*2"
+d2 $ every 2 (slow 4) $ s "808:2*2" # speed "0.5" # pan (cosine)
+xfade 4 $ s "~"
+xfade 3 $ s "~"
+xfade 1 $ s "~"
+xfade 2 $ s "~"
