@@ -1,0 +1,18 @@
+-- Title: Late
+-- Recorded: 10/27/19
+
+d3 $ every 2 (|+ speed "0.5") $ every 4 (fast 4) $ s "arp*3" # crush "3" # gain "0.65" # speed "0.5"
+xfade 2 $ every 3 (# n "3") $ s "808:2*2" # speed "0.8"
+x = ["a","e","i","o","u"]
+xfade 2 $ every 4 (fast 8) $ s "808:3" # speed "0.8" # vowel (choose x)
+setcps 1
+d1 $ s "808:4*4"
+d4 $ s "[bd*4, cb/3]"
+once $ s "cp"
+xfade 5 $ every 2 (|+ speed (choose [0.25, 0.5, 0.33])) $ sound "bd*32" # speed (slow 4 $ perlin + 0.5)
+d6 $ every 3 (# n (choose [2, 4])) $ s "feel(5,8)"
+d7 $ every 2 (slow 4) $ s "cp*16" # speed (choose [1.2, 1, 0.5, 0.5, 0.8, 1])
+once $ s "toys" # crush "4" # vowel "a"
+xfade 1 $ s "~"
+solo 7
+hush
