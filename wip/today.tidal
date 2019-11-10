@@ -1,0 +1,5 @@
+d1 $ s "notes*5" # speed "0.33"
+d2 $ s "wind*8" # gain "0.5"
+d3 $ stut 5 0.5 0.1 $ s "notes*5" # n "3" # speed "0.2"
+once $ s "toys" # crush "4" # gain "0.8" # vowel "i"
+hush
