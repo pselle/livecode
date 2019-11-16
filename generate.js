@@ -17,8 +17,8 @@ function songFragment(filename) {
 }
 
 function sortSongs(a, b) {
-  const dateA = new Date(execSync(`git log -s --format=%ci -1 --reverse songs/${a}`));
-  const dateB = new Date(execSync(`git log -s --format=%ci -1 --reverse songs/${b}`));
+  const dateA = new Date(execSync(`git log --format=%ci --reverse songs/${a} | head -1`));
+  const dateB = new Date(execSync(`git log --format=%ci --reverse songs/${b} | head -1`));
   if (dateA > dateB) {
     return -1;
   }
