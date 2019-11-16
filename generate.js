@@ -16,6 +16,18 @@ function songFragment(filename) {
   `;
 }
 
+function sortSongs(a, b) {
+  const dateA = new Date(execSync(`git log -s --format=%ci -1 --reverse songs/${a}`));
+  const dateB = new Date(execSync(`git log -s --format=%ci -1 --reverse songs/${b}`));
+  if (dateA > dateB) {
+    return -1;
+  }
+  if (dateA < dateB) {
+    return 1;
+  }
+  return 0;
+}
+
 const base = `<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -29,7 +41,9 @@ const base = `<!DOCTYPE html>
     <h1>Pam's Live Code Songs</h1>
     <p>
       Below you'll find my songs.
-      They're in alphabetical order right now, aka the worst kind of order.
+      <s>They're in alphabetical order right now, aka the worst kind of order.</s>
+      By popular demand, the songs are now in (ish) reverse chronological order,
+      aka, the newest songs are first.
       Each song links to its .tidal file on GitHub, which was saved at the end of the song.
       The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>, and I'm
       <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat.
@@ -40,6 +54,7 @@ const songs = fs.readdirSync('./songs')
   .filter((s) => {
     return s.includes('.tidal');
   })
+  .sort(sortSongs)
   .map(songFragment)
   .join('');
 
