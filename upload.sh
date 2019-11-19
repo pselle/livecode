@@ -8,8 +8,8 @@ if [ "$title" == "" ]; then
 fi
 
 echo $title
-echo "Copying the SuperCollider recording to $title.aiff file..."
-cp SC_*.aiff $title.aiff
+echo "Moving the SuperCollider recording to $title.aiff file..."
+mv SC_*.aiff $title.aiff
 echo "Converting to mp3..."
 ffmpeg -i $title.aiff -f mp3 -acodec libmp3lame -ab 320000 -ar 44100 $title.mp3
 echo "Uploading to S3..."
