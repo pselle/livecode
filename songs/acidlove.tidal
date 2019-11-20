@@ -3,7 +3,7 @@
 setcps (128/60/4)
 
 d1 $ s "bd [bd*4] bd bd" # gain "1.1"
-d2 $ sound "sn*16" # speed (slow  $ range (-1) 3 sine) # crush "3"
+d2 $ sound "sn*16" # speed (slow 4 $ range (-1) 3 sine) # crush "3"
 d3 $ n (arp "up" "a'min7'3") # s "arpy" # vowel "a" # crush "3"
 solo 3
 unsolo 3
