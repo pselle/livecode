@@ -1,13 +1,12 @@
 -- Title: August Jam
+-- Recorded: 11/19/2019 (eventually)
 
 d1 $ s "808:3*4"
 d2 $ s "~ 808:4 ~ 808:4"
 d3 $ s "hh*4" # gain "1.7" # speed (choose [-1 ..5])
-solo 3
-unsolo 3
-d4 $ every 3 (# vowel "a") $ s "lt*8" # crush "3" # lpf "5000" # vowel "i" # speed (choose [1..5])
+xfade 4 $ every 3 (# vowel "a") $ s "lt*8" # crush "3" # lpf "5000" # vowel "i" # speed (choose [1..5])
 d5 $ s "casio(5,8)" # gain "1.2"
-d5 $ s "casio(5,8)" # gain "1.3" # n (choose [1..4]) # speed "-1" # crush "3"
+d5 $ s "casio(5,8)" # gain "1.3" # n (choose [1..4]) # speed "-1" -- # crush "3"
 xfade 1 $ s "808:4*4" # crush "3" # speed "3" # gain "1.5"
 solo 1
 unsolo 1
@@ -17,7 +16,7 @@ xfade 4 $ s "~"
 xfade 1 $ layer [id, rev] $ s "808:3*4" # speed "2 1 4 2"
 solo 1
 unsolo 1
-xfade 5 $ layer [(# speed "2"),(|+ speed "4")] $ s "numbers:4 numbers:2 numbers:1 numbers:4" # pan (rand)
+xfade 5 $ layer [(# speed "2"),(|+ speed "1")] $ s "numbers:4 numbers:2 numbers:1 numbers:4" # pan (rand)
 solo 5
 unsolo 5
 xfade 5 $ s "~"
