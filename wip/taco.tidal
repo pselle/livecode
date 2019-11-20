@@ -1,0 +1,12 @@
+-- Title: Taco
+setcps 1.1
+
+d1 $ s "bd*4" # n "1" # gain "1.1" # crush "4"
+d2 $ every 3 (# speed "0.5") $ s "~ sd ~ sd" # n "1" # speed "0.4"
+d3 $ every 4 (fast 4) $ every 3 (# speed (choose [1.1, 1.2, 0.9])) $ s "808:3/4 ~ 808:3 ~"
+d4 $ layer [id, (# speed "0.6")] $ every 3 (slow 2) $  s "arpy*4" # n (choose [-2,-1,1,2,3,4,5]) # speed "0.4"
+d5 $ s "bass3*2"
+solo 3
+unsolo 3
+solo 4
+unsolo 4
