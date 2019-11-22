@@ -1,0 +1,17 @@
+-- Title: Roar
+-- Recorded: 11/21/2019
+
+setcps 1.2
+
+d1 $ s "909*4"
+xfade 1 $ s "909 909 [808*3] 909"
+d2 $ s "~ 808:3 ~ 808:3/2" # speed "1.2"
+xfade 3 $ jux (rev) $ s "bass3*4" # gain "0.9" # speed (range 0.8 1.4 sine)
+once $ s "01roar"
+d4 $ s "[sn*4, hh*2]"
+d5 $ every 3 (fast 2) $ s "arpy(5,7)" # speed "0.4" # n (range 0 5 cosine) # vowel "a"
+xfade 5 $ s "~"
+xfade 1 $ stut 5 0.5 0.1 $ s "909 909 [808*3] 909"
+solo 3
+xfade 3 $ s "~"
+once $ s "01roar"
