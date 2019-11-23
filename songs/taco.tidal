@@ -1,0 +1,22 @@
+-- Title: Taco
+-- Recorded: 11/23/2019
+setcps 1.1
+
+d1 $ s "bd*4" # n "1" # gain "1.1" # crush "4"
+d2 $ s "bass3*2"
+d3 $ s "~ sd ~ sd" # speed "0.6"
+d3 $ every 3 (# speed (choose [0.6,0.5,0.4])) $ s "~ sd ~ sd" # speed "0.4"
+d4 $ s "808:3/4 ~ 808:3 ~"
+d4 $ every 4 (fast 2) $ every 3 (# speed (choose [1.1, 1.2, 0.9])) $ s "808:3/4 ~ 808:3 ~"
+d5 $ s "arpy*4" # n (choose [-2,-1,1,2,3,4,5]) # speed "0.6"
+d5 $ layer [id, (# speed "0.6"), (# speed "0.2")] $ every 3 (slow 2) $  s "arpy*4" # n (choose [-2,-1,1,2,3,4,5]) # speed "0.4"
+d2 $ s "bass*4" # vowel "e"
+solo 5
+unsolo 5
+once $ "wind"
+once $ "birds"
+xfade 5 $ s "~"
+d3 silence
+d2 silence
+d1 silence
+hush
