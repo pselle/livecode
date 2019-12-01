@@ -1,0 +1,20 @@
+-- Title: Apple II
+-- Recorded 12/1/2019
+
+setcps 0.8
+
+once $ s "01wild" # hpf "800" -- Apple II computer, recorded at Recurse Center in New York
+d2 $ s "moog/3" # speed "0.6"
+xfade 1 $ s "wind*4" # speed "0.5"
+xfade 3 $ s "808:4/2 808:2"
+d1 $ layer [id,(# speed "0.3")] $ s "wind*4" # speed "0.5"
+-- d4 $ layer [id, (# speed "0.8")] $ every 3 (# n (choose [0, 5, 4, 6])) $ every 2 (# n "2 1 4 8")
+xfade 5 $ s "notes*3" # speed "0.3"
+d5 $ layer [id, (# speed "0.2")] $ every 2 (# n "2 1 4 8")  $ n (range 2 8 tri) # s "notes" # speed "0.3"
+xfade 5 $ s "~"
+once $ s "01wild"
+xfade 2 $ s "~"
+xfade 3 $ s "~"
+once $ s "01wild"
+xfade 1 $ s "~"
+hush
