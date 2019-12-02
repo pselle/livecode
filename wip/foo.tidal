@@ -1,0 +1,17 @@
+setcps 1.2
+
+d1 $ s "808bd*4"
+d2 $ s "sn ~ sn ~" # n "3 1"
+d3 $ every 3 (fast 8) $ s "808:3/2" # speed "0.8"
+d4 $ brak $ s "bass3*2"
+d5 $ jux (# speed "1") $ layer [id, (# speed "0.6")] $ every 2 (slow (choose [2, 3, 1])) $ s "arpy*8" # speed "0.8" # n (choose [1, 5, 2, 3, 5])
+d6 $ every 3 (|+ speed "0.2") $ s "cp*4" # speed "1.2"
+solo 5
+unsolo 5
+once $ s "toys"
+xfade 5 $ s "arpy*4"
+d5 silence
+solo 6
+xfade 6 $ s "~"
+unsolo 6
+hush
