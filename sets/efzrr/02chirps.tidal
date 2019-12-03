@@ -1,10 +1,13 @@
 setcps 1.1
 
-d1 $ s "birds/3" # crush "2"
-d2 $ fast 3 $ chop 10 $ s "03chirps" # hpf "3000" # gain "1.2" # pan (rand)
+d1 $ s "birds/3" -- # crush "2"
+d2 $ s "03chirps" # hpf "3000"
+-- d2 $ s "03chirps" # hpf "3000" # pan (rand)
+-- d2 $ chop 4 $ s "03chirps" # hpf "3000" # pan (rand)
+d2 $ fast 3 $ chop 10 $ s "03chirps" # hpf "3000" # pan (rand)
 xfade 3 $ s "arp*4" # gain "0.7" #  crush "4"
 d3 $ s "arp*4" # gain "0.8" # crush "4"
-d4 $ s "stab(3,5)" # vowel "a" # lpf "1000"
+d4 $ s "stab(3,5)" # vowel "a" -- # lpf "1000"
 solo 2
 unsolo 2
 xfade 3 $ s "~"
