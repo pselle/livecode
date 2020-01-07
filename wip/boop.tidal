@@ -1,0 +1,7 @@
+setcps 1.2
+d1 $ s "bd*4" # accelerate "<0 1 -1 0.25 -0.5 2.1 -3>" # gain "1.2"
+d2 $ every 4 (fast "<3 4 8>") $ s "bass3*4" # speed "0.9 0.8 1.1"
+d3 $ every 3 (fast "<2 3 4>") $  s "notes*15" # speed (range 0.1 0.8 sine)
+d4 $ s "<bd sn> <cp/2>"
+
+hush
