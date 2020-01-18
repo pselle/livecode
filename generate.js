@@ -8,7 +8,7 @@ function songFragment(filename) {
       <audio
           controls
           preload="metadata"
-          src="http://beats.thewebivore.com/${song}.mp3">
+          src="https://beats.thewebivore.com/${song}.mp3">
               Your browser does not support the
               <code>audio</code> element.
       </audio>
@@ -63,3 +63,4 @@ console.log('writing file');
 fs.writeFileSync('./dist/index.html', base+songs+end, { encoding: 'utf-8' });
 console.log('uploading to S3');
 execSync('cd dist && aws s3 cp index.html s3://beats.thewebivore.com');
+execSync('aws cloudfront create-invalidation --distribution-id=E12L7X3JJKJR8S --paths /');
