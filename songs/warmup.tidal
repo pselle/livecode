@@ -1,0 +1,21 @@
+-- Title: Warmup
+
+setcps 1.2
+d1 $ s "bd*4" # accelerate "<0 1 -1 0.25 -0.5 2.1 -3>" # gain "1.2" # crush "6"
+xfade 2 $ every 4 (fast "<3 4 8>") $ s "bass3*4" # speed "0.9 0.8 1.1"
+-- d3 $ s "notes*15" # speed (range 0.1 0.8 sine)
+d3 $ every 3 (fast "<2 3 4>") $  s "notes*15" # speed (range 0.1 0.8 sine)
+d4 $ s "<bd sn> <cp/2>"
+xfade 5 $ s "hh*4"
+d5 $ jux (|- speed "0.1") $ s "hh*4" # speed (choose [0.8, 0.9, 0.7, 1.1])
+solo 1
+unsolo 1
+xfade 1 $ s "bd*4"
+xfade 2 $ s "bassfoo*4" # speed "0.5"
+d2 $ s "bassfoo*4" # speed "<0.5 0.2 0.4>" # crush "5" # n "2"
+xfade 5 $ s "hh*8"
+xfade 2 $ s "~"
+xfade 3 $ s "~"
+xfade 1 $ s "~"
+d5 silence
+hush
