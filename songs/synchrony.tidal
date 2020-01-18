@@ -1,0 +1,30 @@
+-- Title: Synchrony
+-- Recorded: 1/18/2020
+setcps 0.9
+
+xfade 9 $ fast 3 $ s "01sy:4" # gain 0.8 -- The train!
+once $ s "01sy" -- Conductor
+d1 $ every 3 (# speed "<0.9 0.8 0.7>") $ s "bd*4" # speed "1" # gain "1.2" # n "7"
+d2 $ s "~ ~ cp ~"
+d2 $ s "~ ~ cp ~" # speed "<1 0.7 0.8 0.9>"
+d2 $ s "cp ~ cp ~" # speed "<1 0.7 0.9 0.8>"
+d2 $ every 3 (fast 2) $ brak $ s "cp ~ cp ~" # speed "<1 0.7 0.8 0.9>"
+xfade 9 $ s "~"
+xfade 3 $ s "bass3*4" # n "1"
+once $ s "01sy" # n "1" # gain "0.8"
+xfade 3 $ jux (# speed "0.7") $ s "bass3*4" # n "1" # speed (range 0.6 0.97 rand)
+d3 $ jux (# speed "0.7") $ s "bass3*4" # n "1" # speed (range 0.7 1 rand)
+xfade 6 $ s "hh*8"
+-- xfade 7 $ jux (# speed "0.5") $ s "01wild/4" # n "3" # gain "0.8"
+-- xfade 7 $ s "~"
+once $ fast 3 $ s "01sy:4" # gain 0.8 -- The train!
+xfade 5 $ every 3 (jux (# speed "0.7")) $ s "notes(3,8)" # speed "<0.7 0.8 0.9>" # n "2 0 2 0"
+d5 $ every 2 (|+ speed "0.1") $ every 3 (jux (rev)) $ s "notes(3,8)" # speed "<0.8 0.7 1>" # n "2 0 2 0"
+-- Fade everything out 1x1
+xfade 3 $ s "~"
+xfade 5 $ s "~"
+xfade 6 $ s "~"
+xfade 1 $ s "~"
+xfade 2 $ s "~"
+once $ s "01sy" # n "2" # hpf "900"
+hush
