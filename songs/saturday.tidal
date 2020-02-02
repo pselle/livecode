@@ -1,0 +1,15 @@
+-- Title: Saturday
+-- Recorded: 2/2/2020
+-- (recorded on Sunday)
+
+d1 $ s "bass3*4" # speed "0.8" # accelerate "<0.8 0.5>"
+d1 $ every (choose [3,4]) (|+ speed "0.5") $ s "bass3*4" # speed "0.8" # accelerate "<0.8 0.5 0 -0.5>"
+xfade 2 $ s "[~ cp]*2"
+d3 $ every 3 (# vowel "e") $ s "<hh*8 hh(6,8)>" -- # vowel "e"
+d4 $ every 3 (# n (range 1 9 rand)) $ s "notes(6,8)" # n (range 2 6 cosine) # speed 0.8
+d5 $ s "moog(3,8)" # speed "<1 1.2 1.6 0.5>"
+d4 $ every 3 (# n (range 1 9 rand)) $ s "notes(6,8)" # n (range 8 12 cosine) # speed "<0.8 1 1.2>" # gain "1.3"
+d4 $ s "notes*4" # n (range 8 12 saw)
+xfade 4 $ s "~"
+xfade 5 $ s "~"
+hush
