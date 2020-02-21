@@ -1,0 +1,30 @@
+-- Title: Trentastíco
+-- Notes: This is a re-recording/re-session of synchrony.tidal
+-- Recorded: 2/21/2020
+setcps 0.9
+
+xfade 9 $ fast 3 $ s "01sy:4" # gain 0.8 -- The train!
+once $ s "01sy" -- Conductor
+d1 $ s "808:7*4" # speed "1" # gain "1.2"
+d2 $ s "~ ~ cp ~"
+d2 $ s "~ ~ cp ~" # speed "<1 0.7 0.8 0.9>"
+d2 $ s "cp ~ cp ~" # speed "<1 0.7 0.9 0.8>"
+d2 $ every 3 (fast 2) $ brak $ s "cp ~ cp ~" # speed "<1 0.7 0.8 0.9>"
+xfade 9 $ s "~"
+xfade 3 $ s "bass3*4" # n "1"
+once $ s "01sy" # n "1" # gain "0.8"
+xfade 3 $ jux (# speed "0.7") $ s "bass3*4" # n "1" # speed (range 0.6 0.97 rand)
+d3 $ jux (# speed "0.7") $ s "bass3*4" # n "1" # speed (range 0.7 1 rand)
+xfade 6 $ s "hh*8"
+once $ fast 3 $ s "01sy:4" # gain 0.8 -- The train!
+xfade 5 $ every 3 (jux (# speed "0.7")) $ s "notes(3,8)" # speed "<0.7 0.8 0.9>" # n "2 0 2 0"
+d2 $ every 2 (fast "<3 1 2>") $ "[cp ~]*2" # speed "-1" -- .5
+d5 $ every 2 (|+ speed "0.1") $ every 3 (jux (rev)) $ s "notes(3,8)" # speed "<0.8 0.7 1>" # n "2 0 2 0"
+d3 $ jux (# speed "1.5") $ s "bass3*4" # n "1" # speed (range 0.7 1 sine)
+d2 $ slow 3 $ s "cp*2" # speed "-0.5"
+xfade 3 $ s "~"
+xfade 5 $ s "~"
+xfade 6 $ s "~"
+xfade 1 $ s "~"
+xfade 2 $ s "~"
+hush
