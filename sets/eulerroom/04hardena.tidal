@@ -1,6 +1,5 @@
 -- Title: Hardena
--- started 2/11/2020
--- recorded: 2/26/2020
+
 setcps 1.1
 
 d4 $ s "bass1*8" # speed (range 0.5 2 rand)
