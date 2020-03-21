@@ -1,0 +1,13 @@
+-- Title: Rabbitholes
+
+cps 1
+
+d1 $ sound "01wild:2" # gain "1" # speed "1"
+-- 👆 this is a sample of the creepy sound of the elevators
+-- in the Comcast Tower in Philadelphia (thanks Christopher for the source material),
+-- from before the tower was finished
+d2 $ sound "[voodoo*2 voodoo*3]/2"
+d3 $ rev $ sound "lt [hh hh] lt" # speed "1 2 1" # shape "0.6 0.2 0.3"
+d5 $ sound "seawolf" # vowel "u" # gain "0.8"
+d2 silence
+hush
