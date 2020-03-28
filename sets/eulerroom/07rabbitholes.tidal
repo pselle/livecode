@@ -2,12 +2,25 @@
 
 cps 1
 
-d1 $ sound "01wild:2" # gain "1" # speed "1"
+hush
+d1 $ sound "01wild:2" # gain "1" # speed "0.5"
 -- 👆 this is a sample of the creepy sound of the elevators
 -- in the Comcast Tower in Philadelphia (thanks Christopher for the source material),
 -- from before the tower was finished
-d2 $ sound "[voodoo*2 voodoo*3]/2"
-d3 $ rev $ sound "lt [hh hh] lt" # speed "1 2 1" # shape "0.6 0.2 0.3"
-d5 $ sound "seawolf" # vowel "u" # gain "0.8"
-d2 silence
+xfade 2 $ sound "[voodoo*2 voodoo*3]/2"
+d4 $ s "[808*2, 808:3, 808bd*4]"
+d3 $ s "lt [hh*2] lt" # speed "1 2 1" # shape "0.6 0.2 0.3"
+d3 $ jux (rev) $ sound "lt [hh hh] lt" # speed "1 2 1" # shape "0.6 0.2 0.3"
+d5 $ sound "seawolf" # vowel "a" # gain "0.8"
+once $ s "arpy"
+d6 $ s "tabla2(3,5)"
+xfade 2 silence
+solo 6
+unsolo 6
+xfade 4 $ s "~"
+d4 $ jux (# s "moog") $ s "arp" # crush "4" # speed "<1 0.8 1.2>"
+xfade 5 $ s "~"
+xfade 3 $ s "~"
+solo 1
+xfade 1 $ s "~"
 hush

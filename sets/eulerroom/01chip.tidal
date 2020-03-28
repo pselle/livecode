@@ -2,28 +2,34 @@
 
 setcps 1.2
 
-d1 $ s "bd bd [bd*2] bd"
+d1 $ s "bd bd [bd*2] bd" # n "2" # speed "0.8"
 -- d1 $ s "bd bd [bd*2] bd" # n "2" # speed "0.8"
 d2 $ s "808:3"
 -- d2 $ s "808:3" # speed "0.8"
-d3 $ s "808:2(3,5)" # speed "1 1.2"
--- d3 $ s "808:2(3,5)" # speed (choose [0.8,1,1.2,1.4])
--- d3 $ every 4 (fast 3) $ every 3 (|- speed "0.5") $ s "808:2(3,5)" # speed (choose [0.8,1,1.2,1.4])
-d4 $ s "~ sn ~ sn" # vowel "e" -- # crush "5"
+d3 $ s "808:2(3,5)" # speed "<0.9 1>"
+d3 $ every 2 (fast 3) $ s "808:2(3,5)" # speed (choose [0.8,1,1.2,1.4])
+d3 $ every 4 (fast 3) $ every 3 (|- speed "0.5") $ s "808:2(3,5)" # speed (choose [0.8,1,1.2,1.4])
+d4 $ s "~ sn ~ sn" # vowel "e" # crush "5"
 d5 $ s "bass3*4"
-d6 $ s "hh*2"
-d7 $ s "toys/4" -- # crush "5"
+xfade 3 $ s "~"
+d6 $ jux (|- speed "0.2") $ brak $ s "hh*2"
+d7 $ s "toys/4" # crush "5"
 d7 silence
 xfade 3 $ s "~"
 d3 $ s "notes*4"
--- d3 $ s "notes*4" # n (choose [1,3,4,2])
--- d3 $ s "notes*4" # n (choose [1,3,4,2]) # speed "0.8"
--- d3 $ every 2 (slow 3) $ s "notes*4" # n (choose [1,3,4,2]) # speed "0.8"
--- d3 $ every 2 (slow 3) $ s "notes*16" # n (choose [1,3,4,2]) # speed "0.8"
+d3 $ s "notes*4" # n (choose [2,1,3,4,2])
+d3 $ s "notes*4" # n (choose [1,3,4,2]) # speed "0.8"
+d3 $ every 2 (slow 3) $ s "notes*4" # n (choose [1,3,4,2]) # speed "0.8"
+d3 $ layer [id, rev] $ jux (|- speed "0.2") $ every 2 (slow 3) $ s "notes*4" # n (range 1 7 cosine) # speed "0.8"
+
+d2 $ s "808:3*16"
+d2 silence
+
 -- d3 $ every 2 (slow 3) $ s "notes*16" # n (choose [1,3,4,2]) # speed "0.4"
 d3 $ every 2 (slow 3) $ s "notes*64" # speed "0.3" # n (choose [1,3,4,2])
 solo 2
 unsolo 2
+hush
 solo 3
 xfade 3 $ s "~"
 unsolo 3
