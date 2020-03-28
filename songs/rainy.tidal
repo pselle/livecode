@@ -1,0 +1,21 @@
+-- Title: Rainy
+-- Recorded: 3/28/2020
+
+setcps 1
+
+d1 $ s "cp*2"
+d2 $ s "[~ popkick]*2"
+d3 $ s "bass3*4" # speed "-1"
+once $ s "toys"
+d4 $ every (choose [3,2,4]) (fast 3) $ juxBy 0.75 (|- speed "0.22") $ s "notes*4" # speed "<0.7 0.9 0.8>"
+once $ s "wind"
+d5 $ s "mt(5,8)" # crush (choose [4, 5, 6])
+solo 3
+unsolo 3
+xfade 3 $ s "~"
+once $ s "toys"
+xfade 4 $ s "~"
+once $ s "wind"
+xfade 2 $ s "~"
+xfade 1 $ s "~"
+hush
