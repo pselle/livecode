@@ -1,0 +1,13 @@
+-- Title: Easter Candy
+setcps (140/60/4)
+
+d1 $ every (choose [1,2,3]) (# s "~") $ s "toys" # speed "<0.5 0.8 1>" # gain "0.8"
+d2 $ every 3 (fast 2) $ s "gabba*2" # gain "0.9"
+d3 $ s "hh*8"
+d4 $ s "pluck(5,8)"
+once $ s "h"
+d5 $ s "~ popkick"
+d6 $ rev $ jux (# speed "-1") $ chop 15 $ s "birds" # speed "-1.4"
+once $ s "crow" # speed "-1"
+d4 $ s "pluck(5,8)" # n (choose [0..4])
+hush
