@@ -1,0 +1,15 @@
+-- Title: Desert
+setcps (185/60/4)
+
+d1 $ every 3 (chop 4) $ s "wind*4" # lpf 400
+d2 $ every 2 (# lpf 1800) $ s "hh*8" # lpf 1500
+d3 $ s "808bd"
+d4 $ s "moog/3" # lpf 400 # crush 5
+clutch 3 $ s "808bd*4"
+d1 $ s "wind*8" # lpf 200 # speed "-1"
+d5 $ layer [id, (|+ speed "0.8")] $ s "tabla2(3,8)" # n (range (-1) 5 rand)
+d2 $ s "~ hh ~ hh" # lpf 1500
+d5 $ s "tabla2*4" # n "3" # speed "<0.8 0.5 1>" # vowel "o"
+solo 5
+hush
+unsolo 5
