@@ -6,18 +6,19 @@
 
 setcps 1
 
-d1 $ s "01wild:6" # speed "0.9" # gain "1.2"
-d2 $ s "moog" # gain "0.8"
+xfade 1 $ s "01wild:6" # speed 0.9 # gain 1.2-- # speed "0.9" # gain "1.2"
+xfade 2 $ s "moog" # gain "0.8"
 d3 $ s "tabla2/3"
 d4 $ s "bd*2"
 d5 $ s "~ lt"
 d4 $ s "bd*4"
 xfade 4 $ s "bd*4" # speed "<1 0.8 1.2 1.5>" # crush "5"
-xfade 3 $ s "tabla2(5,8)" # speed (range 0.8 1.3 rand)
-d3 $ layer [id, (|- speed "0.2")] $ every 2 (rev) $ s "tabla2(5,8)" # speed (range 0.7 1.2 cosine)
 d5 $ s "~ cp"
+xfade 3 $ s "tabla2(5,8)" # speed (range 0.8 1.3 cosine)
+d3 $ layer [id, (|+ speed "0.2")] $ every 2 (rev) $ s "tabla2(5,8)" # speed (range 0.7 1.2 cosine)
 d6 $ s "hh*8" # pan (cosine)
-d5 $ layer [id, (# pan "0.7")] $ s "cp*2" # speed "1.2" # pan "0.1"
+d5 $ s "[~ cp]*2"
+d5 $ layer [id, (# pan "0.7")] $ s "cp*2" # speed "1.2" # pan "0.2"
 solo 3
 xfade 3 $ s "~"
 hush
