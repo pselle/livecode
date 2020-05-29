@@ -1,0 +1,17 @@
+-- Title: Hardena
+
+setcps 1.1
+
+d4 $ s "bass1*8" # speed (range 0.5 2 rand)
+xfade 1 $ s "[808*4]" # n 6
+xfade 2 $ s "[~ cp]*2" # n 3 # accelerate "<0.5 1>"
+d2 $ every 3 (fast 3) $ s "[~ cp]*2" # n 3 # accelerate "<0.5 1>"
+d3 $ fastcat [s "bd*2", s "notes jvbass*2"]
+d4 $ jux (rev) $ s "bass3(6,8)" # speed (range 1 1.5 sine) -- # speed "<0.8 1.4 1>"
+d2 $ s "[cp]*2" # n "3"
+d5 $ fast 6 $ jux (# n "1") $ s "numbers"
+d5 silence
+d6 $ s "arp*4" # crush "6"
+solo 4
+hush
+unsolo 4

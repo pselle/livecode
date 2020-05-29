@@ -1,0 +1,23 @@
+-- Title: GERMS
+setcps (128/60/4)
+
+d1 $ s "stab*2"
+d2 $ s "[bass3*4, clubkick*2]"
+d3 $ brak $ s "~ cp ~ cp" # speed (choose [0.9, 1.2, 1.4])
+d4 $ fast 2 $ every 3 (# speed (range 1 4 cosine)) $ s "notes(5,8)"
+d2 $ every 2 (|+ speed "0.1") $ s "bass3*4" # speed "1.1" # pan (rand)
+xfade 5 $ s "clubkick*2"
+xfade 1 $ s "stab*2" # crush "3" # gain "0.7"
+solo 4
+unsolo 4
+once $ s "erk"
+d6 $ s "dork2*8"
+d4 $ sometimes (# vowel "a") $ s "bleep/2"
+d2 silence
+d4 silence
+solo 3
+unsolo 3
+xfade 1 $ s "~"
+xfade 3 $ s "~"
+xfade 5 $ s "~"
+xfade 6 $ s "~"
