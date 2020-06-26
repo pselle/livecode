@@ -1,13 +1,18 @@
 -- Title: Sourdough
 setcps 0.6
 
-d1 $ s "808(5,8)" # n (every 2 (*2) $ choose [1..6])
+xfade 1 $ s "808(5,8)" # n (every 2 (*2) $ choose [1..6])
+xfade 3 $ s "~"
 d2 $ s "arpy(5,8)" # gain "0.8"
-d2 $ degradeBy 0.7 $ every 3 (slow 0.5) $ s "arpy(11,8)" # n (choose [1..7]) # vowel "a" # gain "0.8"
+d2 $ degradeBy 0.7 $ every 3 (slow 0.5)
+d2 $ every 4 (fast 2) $ every 2 (rev) $ s "arpy(5,8)" # n (choose [1..7]) # vowel "a" # gain "0.9"
 d3 $ s "808bd*4"
-d4 $ s "~ ~ blip ~"
+d4 $ jux (# n 0) $ s "~ ~ blip!2" # n 1
 d5 $ degradeBy 0.2 $ s "cc" # gain "0.7"
-d2 $ s "arpy(5,8)" # n (choose [10..15]) # vowel "a" # pan (choose [0.2..0.9]) # crush "5"
+d5 $ fast 2 $ s "808:4*4"
+d2 $ jux (|- n "2") $ s "arpy(5,8)" # n (choose [2..15]) # vowel "a" # pan (choose [0.2..0.9]) # crush "5"
+d6 $ s "~ cp"
+solo 2
 d2 silence
 d1 silence
 d3 silence

@@ -1,0 +1,8 @@
+-- The Great Indoors
+-- Also featuring samples from Jérémie Jost
+setcps 1
+
+once $ s "01indoor:1" # gain "1.2" -- clock
+d1 $ s "01indoor/2" #  sustain 2 # n "<5 4 3>"
+d2 $ s "01indoor*3"
+hush

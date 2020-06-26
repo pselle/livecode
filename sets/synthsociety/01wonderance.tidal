@@ -3,19 +3,22 @@
 setcps 0.9
 
 xfade 3 $ s "wind*7" # gain "0.5"
+xfade 1 $ s "bd*4"
 d1 $ every 2 (# speed "0.7 1 1 1") $ s "bd*4" # n "0 3*3"
-d2 $ s "hh*8" -- # pan (rand)
-d2 $ every 3 (# pan (saw) ) $ s "[hh*8]" # pan (rand)
+d2 $ jux (# pan (sine)) $ s "hh*8" # pan (cosine)
+d2 $ jux (# pan (saw) ) $ s "[hh*8]" # pan (rand)
 xfade 5 $ s "bass3"
 d5 $ s "bass3*2"
 d5 $ s "bass3(5,8)" # hpf "100"
 d5 $ every 4 (# hpf "400") $ s "bass3(5,8)" # hpf "100" # shape "0.2"
 d6 $ every 3 (fast 2) $ s "cp" # speed "1"
-d6 $ every 3 (fast 2) $ s "[cp, ~ 808:1]"
+d6 $ every 3 (fast 2) $ s "[cp, ~ 808:1*2]"
 once $ s "birds" # crush "4"
-d4 $ s "lt*8" -- # shape (range 0 0.5 cosine) # vowel "i"
-d7 $ every 2 (# speed "<0.7 1 1.2>") $ s "tabla2*8" # n (range 1 5 rand) # speed "0.8"
-d7 $ every 3 (# speed "<0.8 0.7 1 1.2>") $ s "tabla2*8" # n (range 2 5 rand) # speed "0.8" # vowel "a"
+d4 $ s "lt*8" # shape (range 0 0.5 cosine) # vowel "i"
+d7 $ s "tabla2*8" # speed "0.8" # n (range 1 5 rand)
+d7 $ every 2 (# speed "0.7 1 1.2") $ s "tabla2*8" # n (range 1 5 rand) # speed (range 0.5 1 rand)-- # speed "0.8 1 0.6 0.8 1"
+d7 $ every 3 (# speed "0.8 0.7 1 1.2") $ s "tabla2*8" # n (range 2 5 rand) # speed "0.8" # vowel "a"
 solo 7
 xfade 7 $ s "~"
 hush
+unsolo 7

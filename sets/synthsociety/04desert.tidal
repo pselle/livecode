@@ -2,19 +2,23 @@
 -- Recorded: 5/20/2020
 setcps (185/60/4)
 
-d1 $ every 3 (chop 4) $ s "wind*4" # lpf 400
+xfade 2 $ s "~"
+unsolo 2 -- oops
+
+xfade 1 $ every 3 (chop 4) $ s "wind*4" # lpf 400
 d2 $ s "hh*8" # lpf 1500 # pan (rand)
+
 xfade 2 $ jux (# speed "0.8") $ every 2 (# lpf 1800) $ s "hh*8" # lpf 1500 # pan (rand)
 d3 $ s "808bd" # gain "1.2"
 d4 $ s "moog/3" # lpf 400 # crush 5
-d5 $ s "01net/4"
+xfade 5 $ s "01net/4" -- this is a cat in an echo mic btw (taken from Twitter)
 clutch 3 $ s "808bd*4" # gain "1.2"
 d1 $ every 3 (# lpf 800) $ s "wind*8" # lpf 500
 d4 $ layer [id, (# speed 1)] $ s "moog/3" # lpf 400 # crush 5 # speed "0.7"
-d6 $ s "tabla2(3,8)"
+xfade 6 $ s "tabla2(3,8)"
 d6 $ s "tabla2(3,8)" # speed (range 0.5 1.5 sine)
 d6 $ every 4 (fast 3) $ every 2 (rev) $ s "tabla2(3,8)" # speed (range 0.5 1.5 sine)
-d6 $ fast 1 $ layer [id, (|+ speed "0.8")] $ s "tabla2(3,8)" # n (range (-1) 5 rand)
+d6 $ fast 1 $ layer [id, (|+ speed "0.8")] $ s "tabla2(3,8)" # n (range 2 6 rand) -- # speed "-0.5"
 xfade 1 $ s "wind*8" # lpf 400
 d2 $ s "~ hh ~ hh" # lpf 1500
 once $ s "moog"
