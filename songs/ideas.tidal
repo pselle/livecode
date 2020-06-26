@@ -1,0 +1,14 @@
+-- Ideas
+-- Recorded 6/26/2020
+
+setcps 0.5
+d1 $ s "bd!3 cp"
+xfade 2 $ s "[hh*8, popkick*2]"
+once $ s "blip"
+d3 $ jux (# vowel "a") $ s "blip(5,8)" # lpf 1000 # vowel "i" # pan (rand) # speed "1 0.2 0.5 0.8"
+d3 $ rarely (rev) $ jux (# vowel "a") $ s "blip(5,8)" # lpf "1000" # vowel "i" # pan (rand) # speed (choose [1, 0.2, 0.5, 0.8])
+d4  $ s "lt!2 mt lt" # speed "0.5"-- # crush "5"
+d4 $ rarely (# crush 5) $ layer [id, (#speed "1")] $  every 3 (fast 3) $ s "lt!2 mt lt" # speed "0.5" -- # crush "5"
+once $ s "808:3"
+solo 3
+xfade 3 $ "~"
