@@ -1,0 +1,17 @@
+-- Title: Adventure
+
+setcps 0.65
+
+d1 $ s "bd*8" # n "0!3 <4 1> 0!3 4"
+d2 $ s "birds?" # speed 1.2 # gain 0.7
+d3 $ chop 20 $ s "01wild:1/4" # gain 0.6
+d4 $ sometimes (# s "casio") $ every 3 (fast 2) $ jux (|+ speed 0.2) $ s "tabla2*4" # speed (choose [0.5, 0.8, 1])
+-- d4 $ sometimes (# s "casio") $ every 3 (fast 2) $ jux (|+ speed 0.2) $ s "tabla2(5,8)" # speed (choose [0.5, 0.8, 1])
+d5 $ s "~ cp"
+d6 $ s "moog/4" # gain 0.8
+ -- s "diphone2/2"
+d7 $ stack [s "bass3*4", s "popkick*2"]
+d8 $ s "hh*8" # pan (rand)
+d8 $ jux (# speed 0.8) $ s "hh*8" # pan (rand)
+-- d4 $ s "popkick*2"
+hush
