@@ -14,4 +14,8 @@ d7 $ stack [s "bass3*4", s "popkick*2"]
 d8 $ s "hh*8" # pan (rand)
 d8 $ jux (# speed 0.8) $ s "hh*8" # pan (rand)
 -- d4 $ s "popkick*2"
+once $ s "bleep"
+xfade 1 $ s "~"
+xfade 7 $ s "~"
+solo 4
 hush
