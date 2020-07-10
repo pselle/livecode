@@ -1,0 +1,18 @@
+-- Title: Space Bloop
+-- Recorded: 7/9/2020
+
+setcps 1.2
+
+d1 $ s "808:1*2"
+d1 $ stack ["bd*4", "808:1*2"]
+d2 $ s "[~ 808:3]*2"
+d3 $ s "clak*8" # n "0" # n "0 1 1 <0 2>"
+d5 $ s "bleep/8" # n "2"
+d5 $ sometimes (# crush "4") $ s "bleep/6" # n "2" # speed "<0.2 0.4 0.8>"
+d4 $ every 3 (fast 4) $ s "notes"
+d7 $ s "hh(5,8)"
+d6 $ jux (rev) $ s "casio!8" # n 1 # speed (range 0.1 0.6 cosine)
+d6 $ jux (rev) $ "casio!2" # speed (range 0.5 1.3 isaw) # n "1"
+once $ s "bleep"
+d8 $ s "popkick!2"
+hush
