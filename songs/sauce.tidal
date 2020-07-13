@@ -1,0 +1,15 @@
+-- Title: sauce
+-- Recorded: 7/13/2020
+
+setcps 0.89
+
+d1 $ s "casio*8" # speed "<0.4 0.5 0.8> 0.5 0.4 <0.8 0.5>"
+d1 $ s "casio*8" # speed "<0.4 0.5 0.8> 0.5 0.5 1 <0.8 1> <0.6 0.8>"
+d2 $ s "808:1!4"
+d1 $ layer [id, (|- speed 0.2)] $ sometimes (# pan (rand)) $ every 2 (slow 3) $  s "casio*8" # speed "<0.4 0.5 0.8> 0.5 0.5 1 <0.8 1> <0.6 0.8>"
+d1 $ layer [id, (|+ speed 0.2), (|- speed 0.2)] $ sometimes (# pan (rand)) $ every 2 (slow 3) $  s "casio(8,20)" # speed "<0.4 0.5 0.8> 0.5 0.5 1 <0.8 1> <0.6 0.8>"
+d2 $ stack [s "808!4" # n 1, s "~ cp"]
+d3 $ every 2 (fast 2) $ s "bass" # crush 8
+once $ s "birds"
+solo 1
+hush
