@@ -19,10 +19,22 @@ figcaption {
   margin-bottom: 4%;
 }
 
-a {
+figcaption > a {
   color:#E8CBC0;
+}
+
+a {
+  color:#636FA4;
 }
 
 a:visited {
   color: #1a1a1a;
+}
+
+h2 {
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: .25em;
 }

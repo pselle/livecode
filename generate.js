@@ -38,15 +38,19 @@ const base = `<!DOCTYPE html>
     <meta name="description" content="Pam's live coding music, made with Tidal Cycles.">
   </head>
   <body>
-    <h1>Pam's Live Code Songs</h1>
+    <h1>Pam the Webivore</h1>
+    <h2>[makes music]</h2>
+    <p><strong>New!</strong> I now have
+    <a href="https://open.spotify.com/album/2S2yL454Shv4zf5oWwjH5p">an EP available on Spotify</a>,
+    or available on any streaming service or where music is sold.
+    Featuring four mastered tracks!</p>
+    <p>Below you'll find my songs.</p>
     <p>
-      Below you'll find my songs.
-      <s>They're in alphabetical order right now, aka the worst kind of order.</s>
-      By popular demand, the songs are now in (ish) reverse chronological order,
-      aka, the newest songs are first.
+      The songs are in (ish) reverse chronological order, aka, the newest songs are first.
       Each song links to its .tidal file on GitHub, which was saved at the end of the song.
-      The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>, and I'm
-      <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat.
+      The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>.
+    <p>I'm <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat, or
+    <a href="https://buttondown.email/pamselle/">subscribe to my newsletter</a> for infrequent updates</a>.
     </p>
   `;
 
@@ -64,3 +68,4 @@ fs.writeFileSync('./dist/index.html', base+songs+end, { encoding: 'utf-8' });
 console.log('uploading to S3');
 execSync('cd dist && aws s3 cp index.html s3://beats.thewebivore.com');
 execSync('aws cloudfront create-invalidation --distribution-id=E12L7X3JJKJR8S --paths /');
+console.log('uploaded to S3');
