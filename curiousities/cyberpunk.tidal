@@ -1,0 +1,11 @@
+setcps 1
+d1 $ n "1 2" # s "d" # crush 3 # pan (sine) # gain 0.8
+xfade 1 $ n "1 2" # s "d" # crush 3 # gain 0.8
+xfade 2 $ s "dork2" # leslie 4
+d2 $ jux (# speed 0.8) $ s "dork2" # leslie 4
+once $ s "diphone2" # gain 1.2 # n (choose [0,1,2])
+d3 $ s "casio(2,5)?"
+d4 $ s "click"
+d5 $ s "moog/3"
+d6 $ s "diphone2/3" # gain 1.2 # n (choose [0,1,2])
+hush

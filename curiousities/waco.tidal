@@ -1,0 +1,19 @@
+setcps 0.8
+
+xfadeIn 1 6 $ jux (# speed 0.4) $ s "arp*4" # n 1 # speed 0.2 # leslie 1 # pan (sine) # gain 0.7
+d1 $ jux (# speed 0.4) $ s "arp*4" # n 1 # speed 0.2 # leslie 1 # pan (cosine) # gain 0.7
+xfade 2 $ stack [s "tink/2", s "~ v" # speed "<1 0.8 1.2>", s "~ rs/2"]
+xfade 3 $ s "tabla2!4" # speed "<0.5 0.6> 0.8 0.4"
+once $ s "sax" # speed 0.8
+d4 $ s "sax/6" # speed "<0.8 1 0.9 1>"
+d5 $ s "hit/3" # speed 0.8 # leslie 4 # gain 0.5
+d6 $ s "noise*2"
+d7 $ s "tink/2"
+d3 $ slow 2 $ rev $ s "tabla2!4" # speed "<0.5 0.6> 0.8 0.4"
+hush
+
+-- once $ s "ul hit"
+once $ s "v metal"
+once $ s "tink noise"
+once $ s "tok rm rs sax"
+hush
