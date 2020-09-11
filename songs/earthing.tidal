@@ -1,0 +1,14 @@
+-- Title: earthing
+-- Recorded: 9/11/2020
+
+setcps 0.6
+d1 $ s "arp*4" # lpf 500 # gain 0.9 # speed 0.4 # leslie "<2 6 5>"
+d1 $ s "arp*4" # leslie 6 # lpf 500 # speed 0.4 # gain 0.9
+xfade 2 $ s "bd*8" # speed 0.3
+d3 $ s "stab/2" # speed "0.3"
+d3 $ s "stab(3,8)" # speed "<0.3 0.2 0.5 0.3 0.4>"
+d3 $ s "stab(3,8)" # speed (range 0.2 0.5 rand)
+d4 $ s "lt/2" # crush 5 # legato 1
+d1 silence
+xfade 3 $ s "~"
+hush
