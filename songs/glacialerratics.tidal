@@ -1,0 +1,11 @@
+-- Title: Glacial Erratics
+
+setcps 0.7
+
+d1 $ s "bd*4"
+d2 $ stack [s "hh*8", s "feel*2"]
+d3 $ fast 2 $ s "~ cp"
+d4 $ s "notes*8" # speed "<0.8 0.9 1 0.7>"
+d5  $ s "control*2" # n (choose [0,1]) # hpf 500
+d6 $ s "bassfoo*4" # lpf 500
+hush
