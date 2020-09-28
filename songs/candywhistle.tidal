@@ -1,0 +1,13 @@
+-- Title: Candy Whistle
+-- Recorded: 9/28/2020
+setcps 1
+
+d1 $ fast 20 $ s "02field/4" # n "4" # note "<0 1 2 3 4 5 3>"
+d2 $ s "arp*3" # lpf 200
+d3 $ s "lt" # hpf 800 # crush 3
+d4 $ jux (rev) $ every 2 (rev) $ s "click*4" # crush 4 # note (range 0 12 rand)
+-- d4 $ s "click*4" # crush 4 # note (range 0 12 rand)
+d1 silence
+d1 $ jux (rev) $ s "02field" # n "3" # speed "<0.8 0.9 1>"
+solo 1
+hush
