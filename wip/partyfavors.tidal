@@ -1,0 +1,6 @@
+-- Title: Party Favors
+
+setcps 1
+
+d1 $ slow 4 $ gap 8 $ s "numbers:0"
+d2 $ striate 2 $ layer [id, (# vowel "o")] $ note "<<c4 d4 e4> <e4 bf4 c4> gs4> <c5 gs4>" # s "supermandolin" # legato 3 # sustain "2 <2 4> <1 4>"
