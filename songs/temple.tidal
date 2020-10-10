@@ -1,0 +1,12 @@
+-- Title: Temple
+-- Recorded 10/9/2020
+
+setcps 1
+
+d1 $ s "808*4" # n 4 # speed "<0.8 0.7> <0.9 1> <0.7 0.8 0.9> <0.8 0.9>"
+d2 $ note "c d d3 ~" # s "supermandolin" # vowel "o" # sustain 2
+d2 $ every 3 (rev) $ note "<c a3 bs3> <d f e> <ef d4> ~" # s "supermandolin" # vowel "o" # sustain 5
+d3 $ s "supergong/4" # note "b3" # sustain 4
+xfade 4 $ every 4 (fast 2) $ s "lt*4"
+solo 2
+hush
