@@ -1,0 +1,15 @@
+-- Title: Party Favors
+-- Recorded: 10/18/2020
+
+setcps 1
+
+d1 $ every 3 (# sustain 2) $ s "super808*4" # voice 1 # n "1 <2 3> 1 <3 2 4>"
+d2 $ s "<~ ~ superhat> superhat" # accelerate "<2 0 2 0 2.5>"
+d3 $ jux (rev) $ s "superchip(3,5)" # note "<d4 e4 f4 g3> g4 <e4 g4>" # slide 0.1 # pitch2 0.5
+d5 $ s "supergong/4" # note "b3" # sustain 4
+d6 $ every 4 (fast 2) $ s "lt*4"
+xfade 4 $ striate 2 $ layer [id, (# vowel "o")] $ note "<<c4 d4 e4> <e4 bf4 c4> gs4> <c5 gs4>" # s "supermandolin" # legato 3 # sustain "2 <2 4> <1 4>"
+hush
+xfade 3 $ "~"
+solo 4
+hush
