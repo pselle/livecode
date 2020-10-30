@@ -1,4 +1,5 @@
 -- Title: hey what
+-- Recorded: 10/30/2020
 
 setcps 1
 d1 $ s "[hh*4, sn*4]" # speed "<0.5 0.7 0.6 0.7>"
