@@ -10,7 +10,6 @@ d5 $ s "numbers/2" # n "<0 1 2>"
 d6 $ s "supermandolin*4" # note "g5"
 d6 $ jux (rev) $ s "supermandolin*8" # note "g6 fs6 <c5 b7>"
 d3 $ every (choose [2, 4, 5]) (fast 2) $ every 4 (|+ lpf "200") $ s "bass2*4" # lpf "<1000 800 1500>" # accelerate "<1 3 1 4>"
-hush
 unsolo 6
 solo 3
 hush
