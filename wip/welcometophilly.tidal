@@ -1,0 +1,9 @@
+-- Title: Welcome [back] to Philly
+-- recorded: 11/??
+d1 $ s "arp*6"
+d2 $ slow "<2 3 4>" $ note "g b f e e g f" #  s "superpiano" # crush 5 # hpf 900 # legato 10 # pan (rand)
+d3 $ s "01wild:3/4"
+d4 $ s "02field"
+d5 $ jux (# speed 0.5) $ s "01indoor" # gain 1.6
+unsolo 5
+hush
