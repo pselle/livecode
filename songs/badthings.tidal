@@ -1,0 +1,15 @@
+-- Title: Bad Things
+-- Recorded: 11/6/2020
+setcps (168/60/4)
+
+d1 $ s "bd*4"
+d2 $ fast 2 $ s "~ cp" # hpf 1000
+d2 $ every 4 (# vowel "a") $ fast 2 $ s "~ cp" # speed 0.8 # hpf 1000
+d3 $ rev $ s "bass3*4" # coarse "<10 1> <16 1> <16 <20 32> 32> <10 32>"--  # coarse "<1 16> 16 <20 32> 32"
+d3 $ s "bass3*4" # coarse "<1 16> 16 <20 32> 32"
+d4 $ layer [id, (# speed 0.8)] $ s "outdoor/2" # pan (rand)
+d5 $ n "<2 0 2 0> <2 3 0> 4 <2 4>" # s "speakspell" # lpf 600
+d5 $ n "<2 0 2 1> <2 3> <4 5> <2 4>" # s "speakspell" # lpf 600 # accelerate 4
+d6 $ s "hh*8"
+solo 5
+hush
