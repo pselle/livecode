@@ -1,0 +1,14 @@
+-- Title: Warm Fall
+-- Recorded: 11/8/2020
+
+d1 $ s "wind*2" # speed "0.5" # hpf 200 -- # accelerate 1
+d3 $ s "tabla2*2" # speed "<0.8 1> <1 0.4 0.5 1>"
+xfade 4 $ s "hh*8"  -- # n "<1 0> 0*7"
+d2 $ jux (rev) $ n "<0 3> <3 <4 5>> <6 3> <4 6>" # s "supervibe" # detune 4
+d2 $ fast 2 $ jux (rev) $ n "<3 4 <2 0>> <2 <0 4>> <5 3 5> 3" # s "supervibe" # detune 4
+d5 $ s "[~ 808:3]*2"
+once $ s "birds"
+once $ s "moog"
+d2 $ s "notes*4" # n "<0 2> 2 0 1"
+solo 2
+hush
