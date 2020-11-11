@@ -1,0 +1,12 @@
+-- Title: upset
+-- Recorded: 11/10/2020
+
+setcps 0.7
+d1 $ s "seawolf*3" # lpf 500 # crush 2 -- # speed 0.4
+d2 $ fast 2 $ s "moog" # n "<1 0 2 1>" # speed 0.8
+d3 $ note "g e g4 e4" # s "supermandolin" -- # legato 2
+d3 $ every 2 (fast 2) $ note "<g g4> <e4 e> <fs g4> e4" # s "supermandolin" -- # legato 2
+d3 $ jux (rev) $ fast 3 $ note "<a e g4 g> <e4 e> <fs a g fs> <fs e>" # s "supermandolin" # legato 2 # gain 1.1
+d4 $ s "bass3*2"
+d5 $ every (choose [2..4]) (fast 4) $ s "808:2"
+hush
