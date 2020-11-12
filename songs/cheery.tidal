@@ -1,0 +1,15 @@
+-- Title: cheery
+-- Recorded: 11/11/2020
+
+setcps 1
+-- d1 $ s "bleep" # speed 0.15 # n 2 # gain 0.8
+d2 $ s "bd*4" # n 3
+d3 $ s "808:2(5,8)" # speed "0.8 0.9 1.2 1.5 0.8"
+d4 $ s "pluck*4"
+d5 $ jux (rev) $ every 3 (# vowel (choose ["a","e"])) $ fast 2 $ s "casio*4" # note "<g f g5 <c3 e4 cs4> g4> <f d4 e4> <f a3> <e4 d6>"
+d3 $ s "808:2*2"
+d6 $ s "hh*8"
+d1 $ s "supergong/4" # note "gs3" # legato 2.5
+d8 $ s "bleep/2" # speed 0.2 # n 2
+solo 5
+hush
