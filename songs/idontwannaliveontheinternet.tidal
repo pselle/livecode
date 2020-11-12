@@ -1,0 +1,13 @@
+-- Title: I don't wanna live on the internet
+-- Recorded: 11/12/2020
+
+setcps 1
+d1 $ s "lt*4" # note "e4 fs4 g4 <a4 e4>" # crush 5
+d2 $ every 3 (fast 2) $ s "casio(5,9)" # n 1 # note "a <e b> b g e"
+d3 $ fast 2 $ s "~ sid"
+d4 $ stack [s "~ 808", s "808:1*4", s "808:2*2", s "~ 808:3/2"]
+xfade 5 $ s "moog/2"
+d6 $ fast 4 $ jux (rev) $ s "supermandolin*2" # note "<a e fs> <g a g>" # legato 5
+d2 $ every 3 (fast 2) $ s "casio(5,9)" # n 1 # note "a <e b> b g e" # crush 1
+d7 $ fast 4 $ s "bd*4"
+hush
