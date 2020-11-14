@@ -1,0 +1,11 @@
+-- Title: T-shaped
+-- Recorded: 11/13/2020
+setcps (130/60/4)
+d1 $ stack [s "tech:6*4", fast 2 $ s "~ tech", s "tech:1", s "~ tech:2/2", s "tech:3/5" , every 2 (fast 4) $ s "tech:4"]
+once $ s "tablex:1" # speed 1.5
+setcps (180/60/4)
+once $ s "tech:11*4"
+d2 $ fast  $ s "~ tink"
+d3 $ s "tok(5,9)" # speed (range "-0.8" 1.2 rand) # vowel "a" -- # speed "-0.4"
+d2 silence
+hush
