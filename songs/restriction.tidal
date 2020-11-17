@@ -1,0 +1,16 @@
+-- Title: restriction
+-- Recorded: 11/16/2020
+
+setcps (90/60/4)
+
+d1 $ s "arp*2" # speed 0.4
+d2 $ s "bd*4"
+d3 $ every 3 (slow 2) $ n "a'min <c3'min f3'min>  a'min7 f'min" # s "superpiano" # legato 2
+d3 $ n (arpg "<a'min7'3 a3'min> e'maj'2 b'min'2 a'min") # s "superpiano" # legato 2
+d3 $ n "<a'min7'3 a3'min> e'maj'2 b'min'2 a'min" # s "superpiano"
+d3 $ n (arpg "'min [bf,a,b,a]") # s "superpiano"
+d3 $ n (arp "diverge" "a'min7'4") # s "superpiano" # legato 2
+d3 $ n "<a'min7'3 a3'min> e'maj'2 b'min'2 a'min" # s "superpiano" # legato 5
+d3 $ slow 6 $ n (arp "<up diverge disconverge pinkyup>" "<a'min7'3 a3'min> e'maj'2 b'min'2 a'min") # s "superpiano" # legato 5
+solo 3 
+hush
