@@ -1,0 +1,8 @@
+-- Title: ravioli
+-- Recorded: 11/18/2020
+
+setcps 0.8
+d1 $ fast 2 $ layer [id, (# vowel "<a e i o u>")] $ n "<a'maj c5'maj a3'maj e5'maj a'maj a3'maj>" # s "superpiano" # legato 5
+-- d1 $ fast 4 $ layer [id, (# vowel "<a e i o u>")] $ n "<a'maj c5'maj e5'maj>" # s "superpiano" # legato 4
+d1 $ fast 1 $ layer [id, (# vowel "<a>")] $ n "<a'maj a3'maj a'maj a3'maj>" # s "superpiano" # legato 5
+hush
