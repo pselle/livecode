@@ -1,0 +1,11 @@
+-- Title: The Great Indoors
+-- Also featuring samples from Jérémie Jost
+setcps 1
+
+once $ s "01indoor:1" # gain "1.2" -- clock
+d1 $ jux (|- speed 0.2) $ s "01indoor*4" # speed "<0.7 1.2 0.8 1>" -- meow
+d2 $ fast 2 $ s "01indoor/2" # n "<5 4 3>" -- pole
+d3 $ s "01indoor:2/2" # hpf 500 -- lightswitch
+d2 $ s "01indoor:5"
+solo 2
+hush
