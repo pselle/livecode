@@ -16,18 +16,6 @@ function songFragment(filename) {
   `;
 }
 
-function sortSongs(a, b) {
-  const dateA = new Date(execSync(`git log --format=%ci --reverse songs/${a} | head -1`));
-  const dateB = new Date(execSync(`git log --format=%ci --reverse songs/${b} | head -1`));
-  if (dateA > dateB) {
-    return -1;
-  }
-  if (dateA < dateB) {
-    return 1;
-  }
-  return 0;
-}
-
 const base = `<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -54,11 +42,8 @@ const base = `<!DOCTYPE html>
     </p>
   `;
 
-const songs = fs.readdirSync('./songs')
-  .filter((s) => {
-    return s.includes('.tidal');
-  })
-  .sort(sortSongs)
+const songs = fs.readFileSync('./songindex.txt', { encoding: 'utf-8' })
+  .split('\n')
   .map(songFragment)
   .join('');
 
