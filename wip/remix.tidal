@@ -1,0 +1,9 @@
+setcps (130/60/4)
+d1 $ layer [id, (# note "ef3"), (# note "g3")] $ s "sundance*4" # note "c3" # lpf 800
+d1 $ stack [s "tech:6*4"]--, fast 2 $ s "~ tech", s "tech:1", s "~ tech:2/2", "tech:3/5", "tech:4"]
+once $ s "tablex:1"
+setcps (180/60/4)
+once $ s "tech:11*4"
+d2 $ s "~ tink"
+d3 $ s "tok(5,9)" # speed (range 0.8 1.2 rand)
+hush
