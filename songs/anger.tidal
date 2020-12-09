@@ -1,0 +1,12 @@
+-- Title: anger
+-- Recorded: 12/9/2020
+
+setcps 0.8
+xfade 1 $ "seawolf*2" # gain 0.8 # lpf 400 -- # gain 0.6 # vowel "<a o i u e>" # speed 0.8
+d1 $ fast 4 $ "seawolf*2" # lpf 400 # gain 0.6 # vowel "<a o i u e>" -- # speed 0.8
+d2 $ s "superpiano*4" # legato 4 # note "<a fs> b g b" # room 0.8 # gain 0.8
+d2 $ fast 1 $ jux (rev) $ s "superpiano*4" # legato 4 # note "<a fs> b g b" # room (choose [0.2..0.8])# gain 0.8
+d3 $ s "~ supergong/3" # note "g" # legato 6 # room 0.8 # speed 0.3 # gain 0.7
+setcps 0.6
+setcps 0.5
+hush
