@@ -1,0 +1,9 @@
+-- Title: cult of the body
+-- Recorded: 12/11/2020
+
+setcps 1
+d1 $ s "tabla2"
+d1 $ s "bass3*2" # speed 0.8
+d2 $ fast 2 $ jux (|- n 3) $ n (arp "<up converge diverge>" "a'dom7'4") # s "superhex" # room 0.8 # enhance "<0 0.2 0.4 1>"
+d3 $ s "moog/3"
+hush
