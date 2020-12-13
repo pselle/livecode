@@ -1,0 +1,11 @@
+-- Title: online
+-- Recorded: 12/13/2020
+setcps 1.2
+d1 $ fast 2 $ s "numbers" # n "<0 1 1 0 1 1 0 0 0 1 1 0 1 1 1 1 0 1 1 1 0 1 1 0 0 1 1 0 0 1 0 1>"
+d2 $ s "808bd*4" # speed "<0.8 1 0.5 2>" # djf 0.5
+d3 $ n "<a'min b'min7> b a fs" #  s "superchip" # octave 2
+d3 $ fast 2 $ n "<a'min b'min7> b a fs" #  s "superchip" # octave 2 # room "<0.2 1 0.8 2 0.4>"
+d3 $ every 3 (rev) $ fast 5 $ n "<b g c a> <a c fs> <a'min c b b'min7> <b a fs>" #  s "superchip" # octave 2 # room "<2 0.4>" # enhance "<0 0.2 0.3>"
+d4 $ s "808:3*4"
+d5 $ every 3 (rev) $ s "lt*8" # speed (range  0.5 0.9 cosine)
+hush
