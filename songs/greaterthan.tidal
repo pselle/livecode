@@ -1,0 +1,13 @@
+-- Title: greaterthan
+-- Recorded: 12/14/2020
+
+setcps 1
+d1 $ n "c" # s "supergong" -- # octave 4
+d1 $ slow 2 $ n "c a e b" # s "supergong" # octave 4 # room 1 # legato 3 # djf 0.2
+d1 $ slow 2 $ every 2 (# enhance 0.5) $ n "<c a <e ef> b>" # s "supergong" # room 1 # legato 3 # octave 4 # djf 0.2
+d1 $ every 2 (# enhance 0.5) $ n "<c a> <c a> <e ef> b" # s "supergong" # room 1 # legato 3 # octave 4 # djf 0.2
+d2 $ s "bin/2" # n "<0 1 1>"
+d3 $ s "casio*4"
+d3 $ s "casio*4" # room 0.2 # note "g" # octave "<2 3 2> 3 2"
+d3 $ slow 6 $ jux (rev) $ fast 2 $ s "casio*4" # room 0.2 # note "g ff af fs" # octave "2 3 <2 3> 2" # speed "<1.2 1 0.8>"
+hush
