@@ -1,0 +1,18 @@
+-- Title: irl
+-- Recorded: 12/18/2020
+
+d1 $ s "wind*8" # djf 0.2
+d2 $ n "[3*4, ~ 1 ~ 1]" # s "808"
+d2 $ n "[3*4, ~ 1 ~ 1, 0, ~ 2/3, 4*8]" # s "808"
+d3 $ s "popkick*2" # note "c3"
+d4 $ s "moog/2"
+d5 $ s "02field/5"
+once $ s "ade:3"
+d6 $ s "bassdm*4" # speed "0.8"
+d8 $ s "ade:3/8"
+xfade 7 $ s "superchip*8" # n "<a'min>" # room 0.1
+d7 $ every 2 (rev) $ s "superchip*8" # n "<a'min f'min a'min> <gs'maj b'min7> a'min <a'min f'maj> a'min7 b'min f'maj gs'maj" # room 0.1 # vowel "a"
+d7 $ every 2 (rev) $ s "superchip*8" # n "<a'min f'min a'min> <gs'maj b'min7> a'min <a'min f'maj> a'min7 b'min f'maj gs'maj" # room 0.1 # vowel "a"
+d7 $ slow 10 $ fast 5 $ every 1 (# vowel (choose ["o", "i", "a","e"])) $ s "superchip*8" # n "<a'min <a b> a> g'min <a'min f'maj a'min7> <a b f> <b'min gs'maj>" # room 0.1
+solo 7
+hush
