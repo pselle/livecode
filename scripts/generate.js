@@ -2,6 +2,9 @@ const fs = require('fs');
 const execSync = require('child_process').execSync;
 
 function songFragment(filename) {
+  if (filename.length == 0) {
+    return '';
+  }
   const song = filename.replace('.tidal', '');
   return `<figure>
       <figcaption><a href="https://github.com/pselle/livecode/blob/master/songs/${filename}">${song}</a></figcaption>
