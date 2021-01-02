@@ -1,0 +1,13 @@
+-- title: another once
+-- recorded: 1/1/21
+
+setcps 0.8
+d1 $ s "bd*4" # lpf 900
+xfade 2 $ s "hh*8" # pan (rand)
+d3 $ note "a? <b c> b [a c]" # s "superchip" # lpf 1500 # legato 0.5-- # vowel "<q a i o>"
+d3 $ every 3 (fast 2) $ rev $ note "[a b] b <b a> [a c]" # s "superchip" # legato 0.5 # lpf 1500 -- # vowel "<q a i o>"
+d3 $ every 3 (fast 2) $ rev $ note "[c3 a3 b3] b3 <b3 a3> [a3 c3]" # s "superchip" # legato 0.5 # lpf 1500 # octave 6 -- # vowel "<q a i o>" 
+d4 $ s "cp*2"
+d5 $ s "808:2*8" # speed (range 0.8 1.2 cosine)
+solo 3
+hush
