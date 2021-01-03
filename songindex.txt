@@ -1,3 +1,4 @@
+succulent.tidal
 anotherone.tidal
 irl.tidal
 greaterthan.tidal
