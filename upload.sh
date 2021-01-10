@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /Users/pamselle/Music/SuperCollider\ Recordings
+cd ~/Music/SuperCollider\ Recordings
 title=$(echo $1 | tr  '[:upper:]' '[:lower:]')
 if [ "$title" == "" ]; then
   echo "Give a title! No extension, just the name."
