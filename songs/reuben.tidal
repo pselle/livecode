@@ -1,0 +1,15 @@
+-- Title: Reuben
+-- Recorded: 1/10/2021
+
+setcps (120/60/4)
+d1 $ s "808bd*4" # speed 0.8
+xfade 2 $ s "arpy*8" # gain 0.8 # octave 2
+d2 $ s "arpy*8" # gain 0.8 # octave 2 # note "<a b> <c d> e <ds e> b e"
+d2 $ every 3 (fast 2) $ every 2 (rev) $ s "arpy*8" # gain 0.8 # note "<a <b <c c b> a> d> <e'min b'min> c'min <e'min a'min> a'min" # octave 2
+d2 $ every 3 (fast 2) $ every 2 (rev) $ s "arpy*8" # gain 0.8 # note "<b ds> c'min <a'min> a'min c ds e" # octave 2
+d3 $ s "~ 808cy" # pan "<0 1 0.8 0.3 0.7>"
+d4 $ fast 2 $ s "808lt 808lt [808lt*2] 808lt"
+d5 $ s "808oh"
+solo 2
+xfade 2 $ s "~"
+hush
