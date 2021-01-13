@@ -1,0 +1,6 @@
+-- Title: Rheya Mix
+setcps (94/60/4)
+
+d1 $ note "g d c gs g d ds c" #  s "superpiano" # octave 3
+d2 $ slow 2 $ note "c as [as*2] ~ gs gs g g" # s "superpiano" # octave 3 # legato 2
+hush
