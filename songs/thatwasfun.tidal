@@ -1,0 +1,19 @@
+-- Title: thatwasfun
+-- Recorded: 1/31/2021
+
+setcps (160/60/4)
+
+xfade 1 $ n "<a'maj d'maj e'maj>" # s "superchip" # gain 0.8 # lpf 1000
+d1 $ n "<a'maj d'maj e'maj>" # s "superchip" # gain 0.8 # octave "<4 4 4 5 5>" # lpf 1400
+d2 $ s "bd*4"
+d3 $ fast 2 $ s "hh [hh*2] hh hh"
+d4 $ fast 2 $ s "~ cp"
+d5 $ n "<d e> <e fs> e a" # s "superchip" # octave 4 # room 0.2 # lpf 1400
+d5 $ fast 2 $ n "<d e> <e fs> e a" # s "superchip" # octave 4 # room 0.2 # lpf 1400
+d5 $ fast 2 $ n "<b cs a> <d a e> <e fs> <e a>" # s "superchip" # octave 3 # room 0.2 # lpf 1400
+once $ s "h"
+d1 $ slow 4 $ n "<a'maj d'maj e'maj>" # s "superchip" # gain 0.8 # octave "<4 4 4 5 5>" # lpf 1400
+xfade 5 $ s "~"
+solo 1
+xfade 1 $ s "~"
+hush
