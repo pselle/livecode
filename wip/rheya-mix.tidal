@@ -1,10 +1,13 @@
 -- Title: Rheya Mix
 setcps (94/60/4)
 
-d1 $ note "c g d c gs g d ds" #  s "superpiano" # octave 3 # lpf 900
-d2 $ slow 2 $ note "c as [as*2] ~ gs gs g g" # s "superpiano" # octave 4 # legato 3 # room 0.3 # gain 0.8 # vowel "i" # velocity 0.9 #detune 0.8
+xfade 1 $ note "c g d c gs g d ds" #  s "superpiano" # octave 3 # lpf 900
+d2 $ slow 2 $ note "c as [as*2] ~ gs gs g g" # s "superpiano" # octave 4 # legato 3 # room 0.3 # gain 0.9 # vowel "i" # velocity 0.9 #detune 0.8
 d3 $ slow 2 $ note "<gs gs c c c gs c c>" # s "superpiano" # octave 2 # legato 3
-d4 $ n "c d e a" # s "arpy"
-d2 $ slow 8 $ note "c as [as*2] ~ gs gs g g" # s "superpiano" # octave 4 # legato 3 # room 0.3 # gain 0.8 # vowel "i" # velocity 0.9 #detune 0.8
+d4 $ slow 4 $ n "cs ds [~ ~ d ds f ds d ds] d3" # s "arpy" # room 0.5
+-- before long bit
+d2 $ slow 8 $ note "ds'maj d'maj c'maj c'min c'maj c'maj c'maj c'maj" # s "superpiano" # octave 4 # legato 3 # room 0.3 # gain 0.8 # vowel "i" # velocity 0.9 #detune 0.8
 once $ s "01Rheya" # n 0 # gain 1.4
+d4 $ s "01Rheya/2" # vowel "a"
 hush
+once $ n "c" # s "superpiano" # octave 3
