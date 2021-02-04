@@ -1,0 +1,15 @@
+-- Title: computer music
+-- Recorded: 2/3/2021
+
+setcps 1
+xfade 1 $ n "a*2" # s "superchip" # octave 3
+d1 $ every 3 (slow 4) $ n "a e d cs" # s "superchip" # octave 3
+-- d1 $ n "a e d cs" # s "superchip" # octave 3
+d2 $ every 3 (fast 3) $ s "~ cp" # speed 2
+d3 $ s "bd*4" # vowel "a"
+d4 $ every 3 (fast 2) $ s "bass3*2"
+xfade 5 $ s "arpy*8"
+d5 $ s "arpy*8" # speed (range 0.2 1.4 rand)
+d5 $ every 2 (slow 4) $  s "arpy*8" # speed (range 0.2 1.4 rand) # vowel "<a e i o u>" # lpf 900
+solo 1
+hush
