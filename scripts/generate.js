@@ -31,18 +31,9 @@ const base = `<!DOCTYPE html>
   <body>
     <h1>Pam the Webivore</h1>
     <h2>[makes music]</h2>
-    <p><strong>New!</strong> I now have
-    <a href="https://open.spotify.com/album/2S2yL454Shv4zf5oWwjH5p">an EP available on Spotify</a>,
-    or available on any streaming service or where music is sold.
-    Featuring four mastered tracks!</p>
-    <p>Below you'll find my songs.</p>
-    <p>
-      The songs are in (ish) reverse chronological order, aka, the newest songs are first.
-      Each song links to its .tidal file on GitHub, which was saved at the end of the song.
-      The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>.
-    <p>I'm <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat, or
-    <a href="https://buttondown.email/pamselle/">subscribe to my newsletter</a> for infrequent updates</a>.
-    </p>
+    <p>The tracks below are my 20 latest, unmastered tracks. If you'd like to support my work, you can buy my <a href="https://pamthewebivore.bandcamp.com/">EP on bandcamp</a>/follow me there for other releases.</p>
+    <p>Each song links to its .tidal file on GitHub, which was saved at the end of the song. The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>.</p>
+    <p>I'm <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat, or <a href="https://buttondown.email/pamselle/">subscribe to my newsletter</a> for infrequent updates.</p>
   `;
 
 const songs = fs.readFileSync('./songindex.txt', { encoding: 'utf-8' })
