@@ -1,0 +1,20 @@
+-- title: water
+-- recorded: 2/7/2021
+
+setcps (120/60/4)
+
+xfade 1 $ s "moog/2"
+d2 $ n "<a  <as af> b>" # s "superpiano" # octave 3 # legato 2 # room 0.4 # lpf 800
+d2 $ fast 4 $ layer [id, (|+ n 3)] $ n "<a <as af> b>" # s "superpiano" # octave 3 # room 0.4 # legato 2 # lpf 800
+d3 $ s "ade/3"
+d4 $ s "808(3,5)" # n 1 # speed "<1.2 1 0.4 0.8>"
+d4 $ fast 2 $ s "808(3,5)" # n 1 # speed "<1.2 1 0.4 0.8>"
+d5 $ fast 2 $ s "arpy*4" # n "f as e f" # vowel "<i o>"
+d5 $ fast 2 $ jux (rev) $ every 3 (fast 4) $ s "arpy*4" # n "<f a e> <as e d> e <f a>" # vowel "<i o>"
+d5 $ s "arpy" # n "a" # octave 1
+d6 $ s "moog/3" # lpf 500
+d1 silence
+d2 silence
+xfade 4 $ "~"
+solo 3
+hush
