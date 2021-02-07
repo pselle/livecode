@@ -1,0 +1,20 @@
+-- title: penta
+-- recorded: 2/7/2021
+
+setcps (140/60/4)
+d1 $ s "arpy*2" # octave 3 # n "c d"
+d1 $ fast 2 $ s "arpy*2" # n "c <d cs>" # octave 3
+d2 $ fast 2 $ s "~ 808:3 ~ 808:3"
+d3 $ s "moog/3" # lpf 800
+d4 $ every 3 (fast 2) $ s "808:4*8" # pan (rand)
+d5 $ s "bass3*2"
+d1 $ every 4 (slow 2) $ fast 4 $ s "arpy*2" # n "<e c e> <d cs>" # octave 3
+d6 $ s "birds/4" # speed "<0.5 0.8 1 0.7>"
+d3 silence
+d3 $ s "ade/2" # lpf 800
+d3 silence
+d1 $ jux (rev) $ fast 4 $ s "arpy*2" # n "<a c a e fs> <d fs cs>" # octave 3
+d6 silence
+solo 1
+xfade 1 $ s "~"
+hush
