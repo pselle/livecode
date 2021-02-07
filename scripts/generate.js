@@ -31,7 +31,7 @@ const base = `<!DOCTYPE html>
   <body>
     <h1>Pam the Webivore</h1>
     <h2>[makes music]</h2>
-    <p>The tracks below are my 20 latest, unmastered tracks. If you'd like to support my work, you can buy my <a href="https://pamthewebivore.bandcamp.com/">EP on bandcamp</a>/follow me there for other releases.</p>
+    <p>The tracks below are my 20 latest, unmastered tracks. If you'd like to support my art, you can <a href="https://pamthewebivore.bandcamp.com/">follow me on bandcamp/purchase some tracks there</a>. If there's anything you find here that you want to see available on other platforms, please send me a note!</p>
     <p>Each song links to its .tidal file on GitHub, which was saved at the end of the song. The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>.</p>
     <p>I'm <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat, or <a href="https://buttondown.email/pamselle/">subscribe to my newsletter</a> for infrequent updates.</p>
   `;
