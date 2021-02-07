@@ -38,6 +38,7 @@ const base = `<!DOCTYPE html>
 
 const songs = fs.readFileSync('./songindex.txt', { encoding: 'utf-8' })
   .split('\n')
+  .slice(0,20)
   .map(songFragment)
   .join('');
 
