@@ -1,0 +1,8 @@
+-- title: apple (like the fruit, not the computer)
+-- recorded: 2/11/2021
+
+setcps 1
+d1 $ every 2 (fast 2) $ n "a as b c" # s "superhex" # gain 0.8 # octave 3
+d2 $ s "~ cp"
+
+hush
