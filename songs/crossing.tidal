@@ -1,4 +1,5 @@
 -- Title: Crossing
+-- (inspired by ACNH)
 -- Recorded: 2/22/2021
 setcps (120/60/4)
 d1 $ n "~ a f d6 c6" # s "superchip" # legato 2 # gain 0.6 # attack 0.8
