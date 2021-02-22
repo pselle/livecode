@@ -1,0 +1,15 @@
+-- Title: Crossing
+-- Recorded: 2/22/2021
+setcps (120/60/4)
+d1 $ n "~ a f d6 c6" # s "superchip" # legato 2 # gain 0.6 # attack 0.8
+d4 $ layer [id, (# n "f")] $ n "d6" # s "superchip" # hold 2 # gain 0.6
+jumpIn' 1 1 $ slow 2 $ note "~ a f d6 c6 ~ a f ~ d f ~ ~ ~ ~ ~" # s "superchip" # legato "0 1 3 2 1 2 1 8" # gain 0.6
+jumpIn' 1 1 $ note "f g a d6 ~ e6 f6 c6" # s "superchip" # gain 0.6
+d2 $ s "bd*4"
+d3 $ s "hh*16" # pan (rand)
+d1 $ n "a f d6 c6" # s "superchip" # attack 2 # release 2 #  legato 3 # gain 0.6 -- # lpf 2000
+d4 $ every 3 (fast 4) $ s "808*4" # lpf 900 # vowel "<a e i o>"
+d1 $ fast 4 $ note "f g a d6 ~ e6 f6 c6" # s "superchip" # gain 0.8 # attack 2 # release 2
+solo 1
+xfade 1 $ "~"
+hush
