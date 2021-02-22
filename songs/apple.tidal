@@ -2,7 +2,10 @@
 -- recorded: 2/11/2021
 
 setcps 1
+d1 $ n "a as b c" # s "superhex" # gain 0.8 # octave 3
 d1 $ every 2 (fast 2) $ n "a as b c" # s "superhex" # gain 0.8 # octave 3
 d2 $ s "~ cp"
-
+d3 $ slow 2 $ n "c" # s "superpiano" # room 0.5 # legato 3
+d3 $ slow 2 $ s "superpiano" # n "c" # room 0.5 # legato 3 # octave (choose [3..5]) # vowel (choose ["a","o","i"])
+d1 $ rev $ every 2 (fast 2) $ n "<f a f b> <as f> <b f> <c f>" # s "superhex" # gain 0.8 # octave 1 -- # pan (rand)
 hush

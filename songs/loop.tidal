@@ -1,0 +1,14 @@
+-- Title: loop
+-- Recorded: 2/21/2021
+
+setcps (160/60/4)
+d1 $ s "808bd*4" # room 0.4 # speed 0.8
+d2 $ jux (|- speed 0.1) $ fast 2 $ s "~ cp" # speed "<1 1.2 0.8 1.1>" # lpf 1400
+d3 $ n "a4 c e ~" # s "superpiano" # octave "<2 5 5 4>" # legato 2 # lpf 900 # room 0.1
+d3 $ jux (rev) $ fast 4 $ every 4 (slow 2) $ n "a4 c e ~" # s "superpiano" # octave "<2 5 5 4>" # legato 2 # lpf 900 # room 0.1
+d4 $ s "hh*8" # speed (range 0.8 1.2 sine)
+d3 $ slow 4 $ jux (rev) $ fast 2 $ every 4 (slow 2) $ n "<e'min a4'min e'min c'min> <c'min e'min a4'min> <e'min c'min a4'min> ~" # s "superpiano" # octave "<2 5 5 4>" # legato 2 # lpf 900 # room 0.1
+xfade 4 $ "~"
+solo 3
+xfade 3 $ "~"
+hush
