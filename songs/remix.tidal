@@ -1,0 +1,19 @@
+-- Title: remix
+-- Recorded: 2/24/2021
+setcps (130/60/4)
+
+d3 $ s "tok(5,9)" # speed (range 0.8 1.2 rand)
+d1 $ s "sundance*8" # lpf 800
+d1 $ stack [s "tech:6*4", fast 2 $ s "~ tech", s "tech:1", s "~ tech:2/2", "tech:3/5", "tech:4"]
+once $ s "tablex:1"
+setcps (180/60/4)
+once $ s "tech:11*4"
+d2 $ s "~ tink"
+d4 $ s "sundance*4" # lpf 800 # speed (range 0.2 0.4 sine)
+solo 3
+unsolo 3
+d5 $ every 3 (fast 3) $ s "808*8" # lpf 500 # note "<a e fs a cs>"
+unsolo 1
+d6 $ s "tech:3/5" # speed 0.8
+solo 6
+hush
