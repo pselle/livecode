@@ -1,0 +1,16 @@
+-- Title: walk
+-- Recorded: 2/28/2021
+
+setcps 0.8
+
+xfade 1 $ s "01wild:7/2" -- the brook at ridley creek state park
+d2 $ s "bd" # speed "<1 0.8>" # attack 0.4
+d3 $ s "birds/3" # release 1.4
+d1 $ loopAt 4 $ slice 4 "0 1 2 3" $ s "01wild:7"
+d1 $ loopAt 4 $ slice 4 "0 2 3 1" $ s "01wild:7"
+d3 $ s "birds/3" # gain 0.6 # speed "<0.8 0.5 1>"
+d4 $ slow 2$ jux (rev) $ chop 8 $ s "wind*8" # gain 0.5 # n "<1 0> 1 <2 5> <2 1> <4 5> 2 1 4"
+xfade 1 $ s "~"
+xfade 4 $ s "~"
+d3 silence
+hush
