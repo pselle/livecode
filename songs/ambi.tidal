@@ -1,0 +1,10 @@
+-- Title: ambi
+-- Recorded: 2/27/2021
+
+setcps 1
+d1 $ jux (# vowel "o") $ s "arp*2" # octave 4 -- a to o
+d2 $ fast 2 $ loopAt 4 $ slice 4 "0 1 2 3" $ s "01indoor:4"
+d2 $ jux (rev) $ sometimes (rev) $ fast 4 $ loopAt 4 $ slice 4 "<3 2> 0 <1 3> 0" $ s "01indoor:4"
+d3 $ s "blip/2" # speed "<1 2 1.4>" # crush 3
+solo 2
+xfade 2 $ s "~"
