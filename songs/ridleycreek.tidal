@@ -1,0 +1,11 @@
+-- Title: ridleycreek
+-- Recorded: 2/28/2021
+
+d1 $ s "01wild:7" -- the brook at ridley creek state park
+d1 $ loopAt 4 $ slice 4 "0 1 2 3" $ s "01wild:7"
+d1 $ loopAt 4 $ slice 4 "<0 2> <1 2> 2 3" $ s "01wild:7"
+d2 $ fast 2 $ jux (rev) $ every 3 (rev) $ n "c a e" # s "superpiano" # attack 2 # legato 2 # octave "<4 4 5 4 6 7>"
+d4 $ slow 2 $ n "<a c a e>" # s "superhammond" # voice "<0 4 5 2 3>" # octave 3 # gain 0.8 # legato 2
+d2 $ slow 2 $ jux (rev) $ every 3 (rev) $ n "a'min c e" # s "superpiano" # attack 2 # legato 2 # octave "<4 4 5 4 6 7>"
+xfade 2 $ s "~"
+hush
