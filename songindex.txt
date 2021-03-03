@@ -1,3 +1,5 @@
+walk.tidal
+ridleycreek.tidal
 ambi.tidal
 remix.tidal
 tired.tidal
