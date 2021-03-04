@@ -1,0 +1,6 @@
+-- From Discord
+let k = 4 in
+d4
+  $ fast k $ repeatCycles k
+  $ up (struct "t*4" $ arpg "<c'maj a'min e'min g'maj>")
+  # sound "synthe:1"
