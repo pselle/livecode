@@ -1,0 +1,10 @@
+-- title: strings
+-- recorded: 3/3/2021
+
+setcps 1
+d1 $ fast 2 $ s "bd*[2|4]" # n "[3|4|1]"
+d2 $ jux (# attack "[0.8|0.1|0.4]") $ struct ("<t*2>") $ s "superhammond" # n "a'min " # attack 0.8 # release 0.2
+d2 $ slow 2 $ sometimes (#octave 3) $ jux (# attack "[0.8|0.1|0.4]") $ every 3 (# n "a'min") $ struct ("<t*2>") $ s "superhammond" # n "a'min <<a'min a'min7> c'min>" # attack 0.8 # release 0.2 # octave 4
+d3 $ s "808/4" # n 5
+xfade 2 $ s "~"
+hush
