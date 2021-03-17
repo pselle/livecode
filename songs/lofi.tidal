@@ -1,0 +1,14 @@
+-- Title: lofi
+-- Recorded: 3/16/2021
+
+setcps (120/60/4)
+xfade 1 $ s "superhammond" # n "[a'min|c'min]" # lpf "300"
+d2 $ brak $ s "bd*[1|2] 808oh"
+d3 $ jux (rev) $ struct "t*[2|4]" (n (arpg "<a'min7 c'min7>")) # s "superpiano" # legato 2 # room 0.2 # attack 0.8 # release 0.2
+d3 $ jux (rev) $ struct "t(3,5)" (n (arpg "<a'min7 c'min7>")) # s "superpiano" # legato 2 # room 0.2 # attack 0.8 # release 0.2
+d3 $ fast 2 $ repeatCycles 3 $ jux (rev) $ struct "t*2" (n (arpg "<a'min7 c'min7>")) # s "superpiano" # legato 2 # room 0.2 # attack 0.8 # release 0.2
+d3 $ slow 2 $ repeatCycles 3 $ jux (rev) $ struct "t*2" (n (arpg "<a'min7 c'min7>")) # s "superpiano" # legato 2 # room 0.2 # attack 0.8 # release 0.2
+d3 silence
+d2 silence
+xfade 1 $ s "~"
+hush

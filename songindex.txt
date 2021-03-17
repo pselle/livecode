@@ -1,3 +1,4 @@
+lofi.tidal
 winedive.tidal
 tentacle.tidal
 strings.tidal
