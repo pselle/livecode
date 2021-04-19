@@ -1,0 +1,18 @@
+-- Title: rand
+-- Recorded: 4/19/2021
+
+setcps 1
+d1 $ s "bd*4" # n 5 # lpf 800
+d1 $ s "bd ~ bd <[bd*2] cc>" # n 5 # lpf 800 -- # pan (rand)
+d2 $ n "<a'min b'min>" # s "superpiano"
+d2 $ n (arpg "<a'min b'min>") # s "superpiano"
+d2 $ fast 2 $ n (arpg "<a'min b'min>") # s "superpiano"
+d2 $ jux (rev) $ fast 2 $ struct "<t(3,5) t*4 t*2 t t>" $n (arpg "<a'min b'min>") # s "superpiano"
+d2 $ jux (rev) $ sometimes (slow 2) $ fast 2 $ struct "<t(3,5) t*4 t*2 t t>" $n (arpg "<a'min b'min>") # s "superpiano" # lpf (range 900 2000 rand)
+d3 $ s "hh*8" # speed (range 1 4 rand)
+d4 $ s "blip/4" # n (range 0 3 rand)
+d1 silence
+d4 silence
+xfade 3 $ s "~"
+xfade 2 $ s "~"
+hush
