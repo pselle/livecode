@@ -1,0 +1,12 @@
+-- Title: eighty
+-- Recorded: 4/28/2021
+
+setcps (160/60/4)
+d1 $ s "bd*4" # lpf 800 # pan (rand)
+xfade 2 $ s "~ arp" # crush 4 # lpf 1000
+d3 $ sometimes (brak) $ fast 2 $ s "hh*2"
+d4 $ s "arpy*8" # n (arpg "[a'min|f'min]") # octave "3"
+d4 $ rev $ sometimes (slow 2) $ s "arpy*8" # n (arpg "[a'min|f'min|g'maj]") # octave "<3 3 4>" # room 0.2-- # lpf "<1000 1500 800>"
+d5 $ fast 2 $ s "~ bass3"
+solo 3
+hush
