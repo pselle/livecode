@@ -1,0 +1,18 @@
+-- Title: sunshiney day
+-- Recorded: 5/13/2021
+
+d1 $ slow 2 $ s "~ birds"
+d1 $ slow 2 $ sometimes (# crush "3") $ s "~ birds"
+xfade 2 $ s "wind*8"
+d2 $ s "wind*8" # octave "<3 4 3 3>"
+d3 $ n (arpg "<a'min g'min>") # s "superpiano" # octave 3 # legato 2
+d3 $ sometimes (fast 2) $ struct "t(5,8)" $ n (arpg "<a'min g'min>") # s "superchip" # octave 3 # legato 2
+d3 $ sometimes (fast 2) $ rarely rev $ struct "t(5,8)" $ n (arpg "<a'min g'min>") # s "casio" # octave 3 # legato 2
+d4 $ fast 1 $ s "blip*4"
+d5 $ fast 1 $ s "808*4" # n 1
+d6 $ fast 2 $ struct "t t*2 t t" $  s " bass3"
+xfade 6 $ "~"
+xfade 2 $ "~"
+solo 3
+xfade 3 $ "~"
+hush
