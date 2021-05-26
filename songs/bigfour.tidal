@@ -1,0 +1,12 @@
+-- Title: Big four
+-- Recorded: 5/17/2021
+
+d1 $ n (arpg "<d'maj7 d'maj>") # s "supermandolin" # octave 4 # room "0.2" # legato 2
+d5 $ rarely (fast 2) $ jux rev $ struct "t [t*2|t] [t*2|t*3] t" $ n (arpg "<d'maj7 d'maj>") # s "supermandolin" # octave 4 # room "0.2" # legato 2
+d5 $ struct "t [t*2|t] [t*2|t*3] t" $ n (arpg "<d'maj7 d'maj>") # s "supermandolin" # octave 4 # room "0.2" # legato 2
+d1 $ rarely (fast 2) $ jux (|+ n "5") $ sometimes rev $ struct "t [t*2|t] [t*2] t" $ n (arpg "<d'maj7 d'maj>") # s "supermandolin" # legato 2
+d2 $ s "bass3*2"
+d3 $ s "birds/8"
+d4 $ fast 4 $ n "[d'maj|d'maj7]" # s "superpiano" #  octave 1 # pan (choose [0.2..0.8]) # lpf 400
+solo 4
+hush
