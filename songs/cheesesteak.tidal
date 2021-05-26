@@ -1,0 +1,18 @@
+-- Title: Cheesesteak
+-- Recorded: 5/25/2021
+
+setcps 0.6
+
+d1 $ slow 2 $ struct "t [t*3] t t t ~ ~ ~" $ s "superhex" # n "<c d>" # octave 2 # room 0.2
+d1 $ slow 2 $ struct "t [t*3] t t t ~ ~ ~" $ s "superhex" # n "<c d>" # room 0.2 # octave 2
+-- d2 $ sometimes (rev) $ jux (rev) $ fast 2  $ struct "t*4" $ n (arpg "c'min") # s "arpy" # room 0.2
+xfade 2 $ struct "t*4" $ n (arpg "c'min") # s "arpy" # room 0.2
+d2 $ sometimes (rev) $ fast 2  $ struct "t*4" $ n (arpg "c'min") # s "arpy" # room 0.2
+d2 $ sometimes (rev) $ jux (rev) $ fast 2  $ struct "t*4" $ n (arpg "<c'min d'min> d'min c'min a'min") # s "arpy" # room 0.2 # octave "<4 3 2 5>"
+d3 $ s "arp"  # octave 4
+d4 $ s "clak/4"
+d5 $ fast 2 $ s "~ clubkick" # lpf 1200
+d5 $ s "~ clubkick" # lpf 1200
+solo 2
+xfade 2 $ "~"
+hush
