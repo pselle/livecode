@@ -23,15 +23,14 @@ const base = `<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Pam Live Codes</title>
+    <title>Pamela Spark</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pam's live coding music, made with Tidal Cycles.">
+    <meta name="description" content="Live coding music by Pamela Spark, made with Tidal Cycles.">
   </head>
   <body>
-    <h1>Pam the Webivore</h1>
-    <h2>[makes music]</h2>
-    <p>The tracks below are my 20 latest, unmastered tracks. If you'd like to support my art, you can <a href="https://pamthewebivore.bandcamp.com/">follow me on bandcamp/purchase some tracks there</a>. If there's anything you find here that you want to see available on other platforms, please send me a note!</p>
+    <h1>Pamela Spark</h1>
+    <p>The tracks below are my 20 latest, unmastered tracks. If you'd like to support my art, you can <a href="https://pamelaspark.bandcamp.com/">follow me on bandcamp/purchase some tracks there</a>. If there's anything you find here that you want to see available on other platforms, please send me a note!</p>
     <p>Each song links to its .tidal file on GitHub, which was saved at the end of the song. The source for this site is on <a href="https://github.com/pselle/livecode">GitHub</a>.</p>
     <p>I'm <a href="https://twitter.com/pamasaur">on Twitter</a> if you'd like to chat, or <a href="https://buttondown.email/pamselle/">subscribe to my newsletter</a> for infrequent updates.</p>
   `;
