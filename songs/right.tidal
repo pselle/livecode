@@ -1,0 +1,13 @@
+-- Title: right
+-- Recorded: 6/21/2021
+
+setcps 1
+d1 $ s "moog/5" # octave "<2 5 4>"
+let k = 1 in d2 $ fast k $ repeatCycles k $ s "~ bd:1" # n "<a d c>"
+xfade 3 $ n (arp "<diverge up>" "c'min") # s "superpiano" -- # room 0.2 # legato 2 # lpf 800
+d3 $ n (arp "<diverge up>" "c'min") # s "superpiano" # room 0.2 # legato 2 # lpf 800
+d3 $ rarely (fast 4) $ fast 2 $ repeatCycles 4 $ n (arp "<down diverge up>" "c'min") # s "superpiano" # room 0.2 # legato 2 # lpf 800
+d3 $ fast 2 $ repeatCycles 4 $ n (arp "<down>" "c'min") # s "superpiano" # room 0.2 # legato 2 # lpf 800
+solo 3
+xfade 3 $ "~"
+hush
