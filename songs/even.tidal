@@ -1,0 +1,20 @@
+-- Title: even
+-- Recorded: 6/23/2021
+
+setcps 0.8
+
+d1 $ slow 2 $ n "e f g e f g e f" # s "superpiano" -- # octave 2 # crush 4 # room 0.2
+d1 $ slow 2 $ n "e f g e f g e f" # s "superpiano" #octave 2 # room 0.2 # crush 4 -- # octave 2 # crush 4 # room 0.2
+d1 $ slow 2 $  n "e f g e f g e f" # s "superpiano" # octave (choose [0..3]) # crush 4 # room 0.2
+d3 $ s "made" # speed (choose [0.8..1.2])
+d2 $ fast 2 $ "arp/3"
+d1 $ rarely (+| n "1") $ slow 2 $  n "e f g e f g e f" # s "superpiano" # octave (choose [0..3]) # crush 4 # room 0.2
+d4 $ fast 2  $ s "cp"
+d5 $ repeatCycles 2 $ n (arpg "<c'min a'min>") # s "tabla2"
+d1 $ rarely (+| n "1") $ slow 2 $  n "e f g e f g e f" # s "superpiano" # octave "0.5" # crush 4 # room 0.2
+xfade 1 $ s "~"
+d3 $ jux (rev) $ rev $ sometimes (jux (fast 2)) $ fast 2 $ repeatCycles 2 $ n (arpg "<c'min a'min>") # s "tabla2"
+d1 silence
+solo 3
+xfade 3 $ s "~"
+hush
