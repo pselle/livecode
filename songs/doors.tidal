@@ -1,0 +1,11 @@
+-- Title: Doors
+-- Recorded: 7/8/2021
+setcps 1
+d1 $ slow 1.5 $ n (arpg "[a'maj|b'maj]") # s "superpiano" 
+d1 $ sometimes (# octave 3) $ jux (rev) $ n (arpg "[a'maj|b'maj]") # s "superpiano" # attack "0.4" # room 0.3
+d2 $ s "moog/3" # n "c" # octave 2
+d3 $ slow 2 $ s "~ <cp blip>"
+d4 $ s "{bd hh cp}%4"
+d5 $ s "bd"
+hush
+hush

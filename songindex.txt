@@ -1,3 +1,5 @@
+doors.tidal
+even.tidal
 right.tidal
 cheesesteak.tidal
 bigfour.tidal
