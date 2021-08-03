@@ -7,6 +7,6 @@ list:
 add:
 	git add songindex.txt songs/
 	git commit -m "New song"
-	git push origin master
+	git push origin main
 
 default: web
