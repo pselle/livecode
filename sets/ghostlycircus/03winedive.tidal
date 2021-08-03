@@ -1,0 +1,15 @@
+-- Title: winedive
+setcps 0.9
+xfade 1 $ rev $ up (struct "t*4" $ arpg "<a'min cs'maj>") # s "casio" # n 1 # attack 0.1
+d2 $ s "bass3(5,8)"
+d3 $ "~ 808" # n "<0 3>"
+d3 $ fast 2 $ repeatCycles 2 $ "~ 808" # n "<0 3>"
+d4 $ s "arpy*8" # up "0 4 7 8"
+d4 $ sometimes (slow 2) $ jux (rev) $ s "arpy*8" # up "<0 2 4 2> <7 6 8>" # room 0.2 -- # n (range 0 2 sine)
+d4 $ slow 2 $ sometimes (slow 2) $ jux (rev) $ s "arpy*8" # up "<0 2 4 2> <7 6 8>" # room 0.2 -- # n (range 0 2 sine)
+xfade 4 $ s "~"
+solo 1
+hush
+
+d2 $ jux (# attack "[0.8|0.1|0.4]") $ struct ("<t*2>") $ s "superhammond" # n "a'min " # attack 0.8 # release 0.2
+d2 silence
