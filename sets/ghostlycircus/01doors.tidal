@@ -1,5 +1,4 @@
 -- Title: Doors
--- Recorded: 7/8/2021
 setcps 1
 d1 $ slow 1.5 $ n (arpg "[a'maj|b'maj]") # s "superpiano" # attack 0.3 # room 0.5
 d1 $ n (arpg "[a'maj|b'maj]") # s "superpiano" # attack 0.3 # room 0.5

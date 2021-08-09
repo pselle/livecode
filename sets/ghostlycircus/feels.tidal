@@ -1,0 +1,12 @@
+-- Title: Feels
+
+setcps 1
+d1 $ s "wind*3" # pan 1
+xfade 2 $ n "a'min/3" # s "moog" # gain 0.8-- # octave (choose [3,5]) # lpf 800
+d2 $ n "a'min/3 bf'min/5" # s "moog" # octave (choose [3,5]) # lpf 800
+d3 $ slow 2 $ (n "<a'min c'maj> <d'min a'maj> c'maj") # s "superpiano" # legato 2 # room 0.2
+d3 $ jux (rev) $ slow 2 $ struct "t(3,5)" (n "<a'min c'maj> <d'min a'maj> c'maj") # s "superpiano" # legato 2 # room 0.3
+d3 $ jux (rev) $ slow 2 $ struct "t(2,3)" (n "<a'min c'maj> <d'min a'maj> c'maj") # s "superpiano" # legato 2 # room 0.3
+xfade 3 $ s "~"
+d2 $ silence
+xfade 1 $ s "~"

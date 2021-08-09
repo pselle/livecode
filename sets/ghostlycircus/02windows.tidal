@@ -1,5 +1,4 @@
 -- Title: Windows
--- Recorded: 8/2/2021
 
 setcps 0.8
 d1 $ n "a c ~ [d|a]" # s "superpiano" # room 0.2

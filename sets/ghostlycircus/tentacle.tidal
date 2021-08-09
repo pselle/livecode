@@ -1,0 +1,10 @@
+-- Title: tentacle
+
+xfade 1 $ repeatCycles 2 $ "moog/3" # n "<0 1 2>"
+d2 $ n "c'maj" # s "supermandolin" # room 0.2 # octave 5 # attack 0.2 # release 0.7 # legato 2
+d2 $ up (struct "t*2" $ arp "down" "<c'maj a'min e'min g'maj>") # s "supermandolin" # room 0.2 # octave 5 # attack 0.2 # release 0.7 # legato 2
+d2 $ slow 4 $ sometimes (slow 2) $ fast 4 $ repeatCycles 4 $  up (struct "t*2" $ arp "<up down diverge pinkyup>" "<c'maj a'min e'min g'maj>") # s "supermandolin" # room 0.2 # octave 5 # attack 0.2 # release 0.7 # legato 2
+d3 $ s "amencutup" # n (irand 12) # lpf 1200
+d1 $ repeatCycles 2 $ "moog/3" # n "<0 1 2>" # octave 3
+solo 2
+hush
