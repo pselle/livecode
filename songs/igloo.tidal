@@ -1,0 +1,17 @@
+-- Title: Igloo
+-- Recorded: 8/8/2021
+
+setcps (160/60/4)
+d1 $ s "bd*4" # room 0.2
+d2 $ every 2 (fast 2) $ s "~ 808:3"
+xfade 3 $ s "arp?"
+xfade 4 $ s "wind*8" # speed 0.3
+d4 $ s "wind*8" # speed "<0.3 0.4 0.2 0.5>" # pan (rand)
+xfade 5 $ s "casio*4"
+d5 $ slow 2 $ sometimes (slow 2) $ rev $ struct "t(5,8)" $ n "a [d|a] e" # s "casio*4" # octave 3 # room 0.3
+d5 $ silence
+xfade 3 $ "~"
+xfade 2 $ "~"
+xfade 1 $ "~"
+xfade 4 $ "~"
+hush
