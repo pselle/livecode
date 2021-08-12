@@ -1,0 +1,29 @@
+-- Title: Easter Candy
+setcps (140/60/4)
+
+d1 $ s "toys" # speed "<-1 0.5 0.8 1>" # gain "0.8" # n 1
+d1 $ every (choose [1,2,3]) (# s "~") $ s "toys" # speed "<-1 0.5 0.8 1>" # gain "0.8" # n 1
+d2 $ s "gabba*2" # gain 1 # lpf 400
+xfade 3 $ s "hh*8"
+once $ s "h"
+xfade 4 $ s "pluck(5,8)"
+d5 $ fast 2 $ s "~ popkick" # crush 5
+xfade 6 $ "birds"
+d6 $ jux (# speed "1.2") $ chop 15 $ s "birds" # speed "1"
+d6 $ rev $ jux (# speed "-1") $ chop 15 $ s "birds" # speed "-1.4"
+d6 silence
+once $ s "crow" # speed "1"
+d4 $ s "pluck(5,8)" # n (range 0 5 cosine) # pan (rand)
+xfade 6 $ n "g b a g" # s "supermandolin"
+d6 $ sometimes (fast 2) $ jux (rev) $  n "<fs g fs> [b|c] a g" # s "supermandolin" # legato 2
+d6 $ jux (rev) $ s "supermandolin*4" # n "<g fs> b a g" # legato 2
+d6 silence
+d4 $ s "pluck*4"
+xfade 4 $ s "~"
+d6 $ s "birds/5"
+xfade 5 $ s "~"
+xfade 2 $ s "~"
+d1 silence
+d6 silence
+d3 silence
+hush

@@ -1,5 +1,6 @@
 -- Title: tentacle
 
+setcps 1
 xfade 1 $ repeatCycles 2 $ "moog/3" # n "<0 1 2>"
 d2 $ n "c'maj" # s "supermandolin" # room 0.2 # octave 5 # attack 0.2 # release 0.7 # legato 2
 d2 $ up (struct "t*2" $ arp "down" "<c'maj a'min e'min g'maj>") # s "supermandolin" # room 0.2 # octave 5 # attack 0.2 # release 0.7 # legato 2

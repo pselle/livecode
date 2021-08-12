@@ -1,0 +1,15 @@
+-- Title: snack
+
+setcps (120/60/4)
+d1 $ s "808bd*4"
+xfade 3 $ s "~"
+xfade 2  $ s "supermandolin(5,11)" #note "bf a c e" # room 0.8 # legato 2 # lpf (range 900 1400 sine)
+d2 $ fast 2 $ s "supermandolin(5, 11)" # note "bf a c d e f a" # legato 2 # room 0.8 # pan (cosine) # lpf "900"
+d2 $ jux (rev) $ fast 2 $ s "supermandolin*4" # note "<bf a c f a e> <c a bf> <e bf> f a" # legato 2 # room (choose [0.1..0.8]) # lpf 1200 # pan (cosine)
+d3 $ s "[~ 808lt]*4"
+d4 $ s "808sd*8" # speed (choose [0.2..0.5]) # vowel "o"
+d4 $ fast 1 $ s "sn*8" # speed (range 0 0.9 rand) # vowel "a"
+solo 2
+xfade 2 $ s "~"
+unsolo 2
+hush
