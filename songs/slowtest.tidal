@@ -1,0 +1,9 @@
+-- Title: Slow test
+
+setcps 0.8
+d1 $ s "arpy(5,8)" # octave 2
+d2 $ n "f bf [a c] c" # s "supermandolin"
+d3 $ s "~ cp"
+d4 $ s "birds/3"
+d5 $ jux (+|speed 0.3) $ every 2 (rev) $ s "blip*8" # speed (range 0.2 0.8 sine) # pan (range 0 1 sine)
+hush
