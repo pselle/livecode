@@ -1,3 +1,4 @@
+slowtest.tidal
 igloo.tidal
 windows.tidal
 doors.tidal
