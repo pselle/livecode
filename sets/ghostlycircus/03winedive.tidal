@@ -1,7 +1,8 @@
 -- Title: winedive
 setcps 0.9
-xfade 1 $ rev $ up (struct "t*4" $ arpg "<a'min cs'maj>") # s "casio" # n 1 # attack 0.1
-d2 $ s "bass3(5,8)"
+d1 $ rev $ up (struct "t*4" $ arpg "<a'min cs'maj>") # s "casio" # n 1 -- # attack 0.1
+xfade 2 $ s "bass3(5,8)"
+d1 $ n (arpg "a'min") # s "casio"
 d3 $ "~ 808" # n "<0 3>"
 d3 $ fast 2 $ repeatCycles 2 $ "~ 808" # n "<0 3>"
 d4 $ s "arpy*8" # up "0 4 7 8"
@@ -13,3 +14,4 @@ hush
 
 d2 $ jux (# attack "[0.8|0.1|0.4]") $ struct ("<t*2>") $ s "superhammond" # n "a'min " # attack 0.8 # release 0.2
 d2 silence
+xfade 4 $ s "~"

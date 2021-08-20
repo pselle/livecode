@@ -1,12 +1,14 @@
 once $ s "01circus:3" # gain 1.8
 setcps (140/60/4)
+d6 $ silence
 d1 $ s "bd*4"
-d2 $ s "01circus/4" # gain 1.5 # n "[0|1]"
+d2 $ s "01circus/4" # gain 1.5 # n "<0 1>"
 d2 $ silence
-d3 $ s "moog/3" # gain 0.8
+d3 $ s "arp/3" # gain 0.8
 d4 $ s "~ cp"
 d5 $ s "hh*8" # pan (rand)
-d6 $ sometimes (fast 2) $  struct "t(5,8)" $ n (arpg "a'min7") # s "casio" # speed 0.8 # octave "[2|4|3]"
-once $ s "01circus:2"
+d6 $ rarely (rev) $ sometimes (fast 2) $  struct "t(5,8)" $ n (arpg "<c'min a'min7>") # s "casio" # speed 0.8 # octave "[2|4|3]"
+once $ s "01circus:3"
+
 d6 $ silence
 hush
