@@ -1,0 +1,16 @@
+-- Title: Drown
+-- Recorded: 8/31/2021
+
+setcps 0.8
+xfade 1 $ n "d" # s "supermandolin" # room 1
+d1 $ n "d" # s "supermandolin" # room 1 # legato 3 # octave 3
+d1 $ n "[d|fs]" # s "supermandolin" # room 1 # legato 3 # octave 3
+d1 $ fast 8 $ n "[d|fs]" # s "supermandolin" # room 1 # octave 2 # legato 3
+xfade 2 $ s "hh*8" # pan (rand)
+d3 $ fast 8 $ n "cs d" # s "superpiano"
+d3 silence
+solo 1
+d2 $ fast 2 $ s "hh*8"
+d3 $ fast 16 $ s "blip"
+solo 3
+hush
