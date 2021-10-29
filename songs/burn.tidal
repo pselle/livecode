@@ -1,0 +1,20 @@
+-- Title: burn
+-- Recorded: 10/29/2021
+
+setcps 0.7
+d2 $ s "arp" # crush 4
+d1 $ n "a" # s "superhex" # octave 3 # room 0.2
+d1 $ n "a'min c'min" # s "superhex" # octave 3 # room 0.2
+d1 $ sometimes (fast 2) $ note "a'min7 c'min" # s "superhex" # room 0.2 # octave "<3 4 2>"
+xfade 3 $ n (arpg "<a'min 7 c'min>") # s "superpiano" # octave 5  # sustain 2 # attack 0.4 # gain 1.2
+d3 $ rev $ n (arpg "<a'min 7 c'min>") # s "superpiano" # octave 5  # sustain 2 # attack 0.4 # gain 1.2
+d3 $ jux (rev) $ sometimes (fast 2) $ n (arpg "<a'min 7 c'min>") # s "superpiano" # octave 5  # sustain 2 # attack 0.4 # gain 1.2
+d4 $ s "toys:1?"
+d4 $ s "bass3*4" # octave 5
+d5 $ s "toys?" # n 1
+d6 $ s "bd*2"
+xfade 1 $ "~"
+xfade 3 $ "~"
+xfade 2 $ "~"
+xfade 6 $ "~"
+hush
