@@ -1,0 +1,16 @@
+-- sackcloth and ashes
+-- Recorded: 11/10/2021
+
+setcps (115/60/4)
+
+d1 $ slow 1 $ n "<a d cs>" # s "supergong" # octave 3 # legato 2
+xfade 2 $ s "pluck" # n "a d cs" # octave 4
+d4 $ s "bass3*2"
+d5 $ s "bd*2" # octave 3
+d2 $ struct "t(6,8)" $ s "pluck" # n "a d cs" # octave 4
+d2 $ jux (rev) $ struct "t(6,8)" $ s "pluck" # n "a d cs" # octave 4
+once $ s "pebbles" # begin 0.4 # end 0.7
+d3 $ sometimes (fast 2) $ rev $ layer [id, (|+ note 3)] $ s "sax*4" # begin 0.7 # end 0.95 # n "<a cs d fs>" # octave "<4 5 3>"
+solo 3
+xfade 3 $ "~"
+hush
