@@ -1,0 +1,12 @@
+-- Title: jessy
+
+setcps (70/60/4)
+d1 $ s "arp*4"
+d1 $ jux (# speed "<1.2 0.8 0.7>") $ s "arp*4"
+d1 $ sometimes (fast 2) $ jux (# speed "<1.2 0.8 0.7>") $ s "arp*4" # octave "<3 3 6>"
+d2 $ s "lt*4" # speed 0.8 # lpf 800
+d2 $ s "lt [lt*2|cp] <lt cp> lt" # speed 0.8 # lpf 800
+d3 $ fast 2 $ layer [id, (# octave 2)] $ sometimes rev $ fast 2 $ n "<a c> <c ds> <ds a> <e fs>" # s "superpiano" # legato 2 # room 0.2 # attack 0.6 # sustain 0.8 # release 2 # octave 7
+d4 $ s "bd*4"
+solo 3
+hush
