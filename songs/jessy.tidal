@@ -1,5 +1,5 @@
 -- Title: jessy
-
+-- Recorded: 12/7/2021
 setcps (70/60/4)
 d1 $ s "arp*4"
 d1 $ jux (# speed "<1.2 0.8 0.7>") $ s "arp*4"
