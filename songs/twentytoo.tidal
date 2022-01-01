@@ -1,0 +1,13 @@
+-- Title: twentytoo
+-- Recorded: 1/1/2022
+
+setcps (120/60/4)
+d1 $ s "bd <bd*3 mt> bd bd" # lpf 500
+d3 $ n "<d g> <c fs>" # s "superpiano" # octave 3 # room 0.2 # legato 2 # hpf 100-- higher
+d2 $ fast 2 $ s "~ cp"
+d3 $ n "<d g c> <c fs e g>" # s "superpiano" # octave 2 # room 0.2 # legato 2 # hpf 100
+d3 $ rev $ fast 9 $ jux (fast 2) $ n "<g d g cs> <cs fs e g>" # s "superpiano" # octave 2 # room 0.2 # legato 2 # hpf 100-- higher
+d4 $ s "[hh*8|hh*6|hh*4 lt hh lt hh]"
+d5 $ s "bleep"
+solo 3
+hush
