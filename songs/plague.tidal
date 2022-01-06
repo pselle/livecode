@@ -5,6 +5,7 @@ setcps 0.5
 xfade 1 $ s "arp*2"
 d1 $ s "arp*2" # pan (choose [0.3..1])
 d1 $ jux (|+ speed "0.2")$ s "arp*2" # pan (choose [0.3..1])
+d2 $ n "a" #  s "superhex" # lpf 500 # attack 0.5 # sustain 1 # decay 0.8 # release 0.5 # octave "<4 5 3>"
 d2 $ n "a <c fs>" #  s "superhex" # lpf 500 # attack 0.5 # sustain 1 # decay 0.8 # release 0.5 # octave "<4 5 3>"
 d2 $ jux (fast 2) $ n "a <c fs>" #  s "superhex" # lpf 500 # attack 0.5 # sustain 1 # decay 0.8 # release 0.5 # octave "<4 5 3>"
 d2 $ sometimes (slow 2) $ jux (fast 2) $ n "a c fs g" #  s "superhex" # lpf 500 # attack 0.5 # sustain 1 # decay 0.8 # release 0.5 # octave "<4 5 3>"
@@ -12,6 +13,7 @@ d2 $ rev $ sometimes (slow 2) $ jux (fast 2) $ n "[a*2] <c [e*2]> <[fs g] fs> fs
 d3 $ s "toys:1/2" # crush 4
 d4 $ s "hh*8" # pan 0.8
 d5 $ s "~ lt"
+d1 silence
 solo 2
 d2 $ slow 4 $ rev $ sometimes (slow 2) $ jux (fast 2) $ n "[a*2] <c [e*2]> <[fs g] fs> fs" #  s "superhex" # lpf 500 # attack 0.5 # sustain 1 # decay 0.8 # release 0.5 # octave "<4 5 3>"
 hush

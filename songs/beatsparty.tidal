@@ -1,20 +1,17 @@
 -- Title: beatsparty
 -- Recorded 1/2 to use as a base with Roland synth, recorded another session 1/4 for livecode-only
 -- Recorded 1/4/2021
+-- Re-recorded on 1/5 because 1/4 didn't have all tracks :|
 
 setcps (160/60/4)
 d1 $ s "808bd:4*4" # gain "1.1 1 1 1"
 d2 $ s "808lc(5,8)" # speed (range 0.8 1.2 rand)
 d2 $ jux (rev) $ s "808lc(5,8)" # speed (range 0.8 1.2 rand)
-d3 $ s "~ 808cy" # crush 5
+d3 $ sometimes (# crush 5) $ "~ 808cy"
 d3 $ sometimes (fast 4) $ s "~ 808cy" # crush 5
-d4 $ silence
 d4 $ "moog/3" # octave "<3 2 4>"
-d3 $ jux (|+ n 1) $ sometimes (fast 4) $ s "~ 808cy" # crush 5
-d1 $ fast 2 $  s "808bd:4*4" # gain "1.1 1 1 1"
-d3 $ silence
-d3 silence
+d3 $ jux (|+ n 1) $ sometimes (fast 4) $ s "~ 808cy" # lpf (choose [500..1200])-- # crush 5
+d1 $ fast 1 $ s "808bd:4*4" # gain "1.1 1 1 1"
 solo 2
 xfade 2 $ "~"
-
 hush
