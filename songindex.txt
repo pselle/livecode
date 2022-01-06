@@ -1,3 +1,4 @@
+plague.tidal
 beatsparty.tidal
 twentytoo.tidal
 jessy.tidal
