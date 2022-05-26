@@ -1,0 +1,13 @@
+-- Title: upstate
+-- Recorded: 5/25/2022
+
+setcps 0.8
+d1 $ s "~ bd" # lpf 500 # n 3
+xfade 2 $ s "arp/2" # lpf 200
+d3 $ s "lt*2" # lpf 200
+d4 $ slow 2 $ n "<a e fs>" # s "superhex" # room 0.2 # legato 2
+d4 $ n "<<e b> <a cs> <cs a> e fs>" # s "superhex" # room 0.2 # legato 2
+d4 $ jux (rev) $ fast 2 $ n "<<e b> <a cs> <cs a> e fs>(2,5)" # s "superhex" # room 0.2 # legato 2
+d4 $ jux (rev) $ n "<<e b> <a cs> <cs a> e fs>*2" # s "superhex" # room 0.2 # legato 2
+xfade 4 $ s "~"
+hush
