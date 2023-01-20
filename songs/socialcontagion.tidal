@@ -1,0 +1,13 @@
+-- Title: social contagion
+-- Recorded: 1/19/23
+
+xfade 1 $ s "superhammond/2" # n "a'maj7" # gain 0.4
+d2 $ struct "t t*4"  $ n "[g'min, d'min]" # s "superhammond" # gain 0.45 # room 0.4 # legato 2
+d2 $ struct "[t*2] t*4"  $ n "[g'min, d'min]" # s "superhammond" # gain 0.44 # room 0.4 # legato 2
+d2 $ sometimes (slow 2) $ fast 1.2 $ sometimes (rev) $ struct "[t*2] t*4"  $ n "[g'min, d'min]" # s "superhammond" # gain 0.45 # room 0.4 # legato 2 # pan (rand)
+xfade 3 $ s "arp/2" # gain 0.5
+xfade 4 $ fast 1.2 $ sometimes (rev) $ struct "[t*2] t*4" $ n (arpg "<a'maj7 d'min7>") # s "superpiano" # gain 0.45 # room 0.4 # legato 2
+xfade 2 $ s "~"
+xfade 1 $ s "~"
+solo 3
+hush
