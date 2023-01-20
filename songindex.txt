@@ -1,3 +1,4 @@
+socialcontagion.tidal
 upstate.tidal
 plague.tidal
 beatsparty.tidal
