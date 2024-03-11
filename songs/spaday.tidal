@@ -1,5 +1,25 @@
 -- Title: spaday
--- 
+-- Recorded: 03/10/2024
 
-d1 $ rarely (fast 2) $ s "bass3*4" -- # octave 4
+setcps (100/60/4)
+xfade 1 $ rarely (fast 2) $ s "bass3*4"
+xfade 2 $ sometimes (rev) $ s "arpy*8" # octave 2
+d2 $ s "arpy*8" # n (range 0 7 saw) # octave 2
+d2 $ s "arpy*8" # n (range 4 12 saw) # octave 2
+d2 $ rev $ s "arpy*8" # n (range 4 12 sine) # octave 2
 d2 $ sometimes (rev) $ s "arpy*8" # n (range 8 12 saw) # octave 2
+once $ s "toys" # n 6
+d3 $ s "trump"
+d3 $ s "[trump*2] ~ ~ ~ ~" # speed 0.7
+once $ s "ul"
+d3 silence
+d4 $ s "ul:2*8" -- ul:0 as well cute chirp
+once $ s "ade:3"
+d3 $ sometimes (fast 4) $ fast 2 $ s "~ ul"
+d5 $ s "sundance(3,5)" # speed (range 0.4 1.4 cosine)
+d5 $ fast 2 $ s "sundance(3,5)" # speed (range 0.4 1.4 cosine)
+d3 silence
+d2 silence
+d5 silence
+d1 silence
+hush
