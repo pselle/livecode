@@ -1,0 +1,5 @@
+-- Title: spaday
+-- 
+
+d1 $ rarely (fast 2) $ s "bass3*4" -- # octave 4
+d2 $ sometimes (rev) $ s "arpy*8" # n (range 8 12 saw) # octave 2

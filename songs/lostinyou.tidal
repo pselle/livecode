@@ -1,0 +1,19 @@
+-- lost in you
+-- Recorded 03/10/2024
+
+setcps (120/60/4)
+xfade 1 $ "808bd*4" # decay 0.9 # speed 0.4
+xfade 4 $ s "stab(3,5,2)" # octave 2 # gain 0.4
+d4 $ s "stab/2" # octave 2 # gain 0.7
+d1 $ sometimes (# pan rand) $ "808bd*4" # decay 0.9 # speed 0.4
+xfade 2 $ s "supermandolin" # n "<1 3> <1 2> . <1 3> <4 2>" # gain 0.7
+d2 $ s "supermandolin" |+| n "<1 3> <1 2> . <1 3> <4 2>" # gain 0.7
+d2 $ fast 2 $ s "supermandolin" |+| n "<1 3> <1 2> . <1 3> <4 2>" # gain 0.7
+d2 $ fast 4 $ s "supermandolin" |+| n "<1 3> <1 2> . <1 3> <4 2>" # gain 0.9  # distort (choose [0.2, 0.1, 0.4])
+d2 $ fast (choose [2, 4, 6,1]) $ sometimes (rev) $ fast 1 $ s "supermandolin" |+| n "<1 3> <1 2> . <1 3> <4 2>" # distort "0.7" # gain 0.9
+d4 $ s "stab/2" # octave 3 # gain 0.7
+solo 2
+unsolo 2
+xfade 2 $ s "~"
+d4 silence
+hush
