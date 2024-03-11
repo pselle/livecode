@@ -7,7 +7,7 @@ function songFragment(filename) {
   }
   const song = filename.replace('.tidal', '');
   return `<figure>
-      <figcaption><a href="https://github.com/pselle/livecode/blob/master/songs/${filename}">${song}</a></figcaption>
+      <figcaption><a href="https://github.com/pselle/livecode/blob/main/songs/${filename}">${song}</a></figcaption>
       <audio
           controls
           preload="metadata"
